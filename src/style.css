@@ -211,6 +211,51 @@ html[lang="ar"] h4 {
   border-color: rgba(198, 241, 106, 0.45);
 }
 
+/* Scroll-Driven Shipment Box & Interactive Tracking System */
+.shipment-box-rider {
+  will-change: inset-inline-start, transform;
+  transition: inset-inline-start 0.14s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s ease;
+}
+
+.tracking-progress-fill {
+  will-change: width;
+  transition: width 0.14s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tracking-step-btn {
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tracking-step-btn.is-active {
+  background-color: var(--brand-night);
+  color: #FFFFFF;
+  border-color: var(--brand-violet);
+  box-shadow: 0 10px 24px -8px rgba(29, 18, 64, 0.28);
+  transform: translateY(-2px);
+}
+
+.tracking-step-btn.is-passed .step-dot {
+  background-color: var(--brand-lime);
+  color: var(--brand-night);
+  border-color: var(--brand-lime);
+}
+
+.scroll-step-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-step-card.is-current {
+  border-color: var(--brand-violet) !important;
+  border-width: 2px !important;
+  box-shadow: 0 20px 40px -12px rgba(46, 22, 117, 0.16);
+  transform: translateY(-4px);
+}
+
+.scroll-step-card.is-current .step-badge-num {
+  background-color: var(--brand-lime);
+  color: var(--brand-night);
+}
+
 /* Sticky Navbar */
 #navbar {
   background-color: rgba(246, 245, 250, 0.92);

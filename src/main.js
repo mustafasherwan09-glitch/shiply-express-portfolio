@@ -20,8 +20,30 @@ const translations = {
       contact: 'پەیوەندی',
       cta: 'داگرتنی ئەپ'
     },
+    tracker: {
+      live_header: 'بەدواداچوونی زیندوو · SHP-48213',
+      short1: 'هەڵبژێرە',
+      short2: 'دەیکڕین',
+      short3: 'بەڕێوەیە',
+      short4: 'گەیشت 📦',
+      s1_label: '١. هەڵبژاردن لە دیسکەڤەر یان ناردنی لینک',
+      s1_badge: 'هەنگاوی ١ · دیسکەڤەر',
+      s1_card_title: 'هەڵبژێردرا لە دیسکەڤەر · SHP-48213',
+      s1_card_desc: 'کاڵاکەت هەڵبژێردرا بە نرخی کۆتایی $48.00 تا هەولێر ✨',
+      s2_label: '٢. کڕینی کاڵا بە یەک نرخی کۆتایی (٥٠٪ ئێستا)',
+      s2_badge: 'هەنگاوی ٢ · کڕدرا',
+      s2_card_title: 'کڕدرا لە فرۆشگا · SHP-48213',
+      s2_card_desc: 'کاڵاکەت بە سەرکەوتوویی کڕدرا و ئامادەیە بۆ ناردن 🛍️',
+      s3_label: '٣. بەڕێوەیە بە فڕۆکە بۆ کۆگای هەولێر',
+      s3_badge: 'هەنگاوی ٣ · لە ڕێگایە',
+      s3_card_title: 'بەڕێوەیە بۆ هەولێر · SHP-48213',
+      s3_card_desc: 'بارەکەت لە ڕێگایە و لەناو ئەپ بە ڕاستەوخۆ دەبینرێت ✈️',
+      s4_label: '٤. گەیشتە هەولێر و ڕادەستی تۆ دەکرێت 📦',
+      s4_badge: 'گەیشتە دەستت ✓',
+      s4_card_title: 'گەیشتە هەولێر · SHP-48213',
+      s4_card_desc: 'سڵاو 👋 بارەکەت گەیشتە هەولێر و ئەمڕۆ دەیگەیەنینە دەستت 📦'
+    },
     hero: {
-      badge: 'لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک بنێرە',
       title: '«تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین»',
       subtitle: 'هەر کاڵایەکت دەوێت لە بەشی دیسکەڤەری ناو ئەپەکەمان هەڵیبژێرە کە نرخی گەیشتنی بۆ هەولێر لەسەرە، یان لینک و وێنەی شاشەکەی بنێرە — ئێمە بە یەک نرخی کۆتایی بۆت دەکڕین و دەیگەیەنینە دەستت.',
       cta_app: 'داگرتنی ئەپ',
@@ -70,7 +92,7 @@ const translations = {
       }
     },
     how: {
-      badge: 'چۆن کاردەکات',
+      badge: 'چۆن کاردەکات · زیندوو لەگەڵ سکرۆڵ',
       title: 'لە هەڵبژاردنەوە تا بەردەم دەرگای ماڵەوەت بە ٣ هەنگاو',
       subtitle: 'هەڵبژێرە ← ئێمە بە یەک نرخی کۆتایی دەیکڕین ← لەگەڵ بەدواداچوونی ڕاستەوخۆ وەریدەگریت',
       step1: {
@@ -207,8 +229,30 @@ const translations = {
       contact: 'تواصل معنا',
       cta: 'حمّل التطبيق'
     },
+    tracker: {
+      live_header: 'تتبّع مباشر للشحنة · SHP-48213',
+      short1: 'اختر',
+      short2: 'نشتريه',
+      short3: 'في الطريق',
+      short4: 'وصل 📦',
+      s1_label: '١. الاختيار من ديسكفر أو إرسال الرابط',
+      s1_badge: 'الخطوة ١ · ديسكفر',
+      s1_card_title: 'تم الاختيار من ديسكفر · SHP-48213',
+      s1_card_desc: 'تم اختيار منتجك بالسعر النهائي $48.00 واصل إلى أربيل ✨',
+      s2_label: '٢. شراء المنتج بسعر نهائي واحد (٥٠٪ الآن)',
+      s2_badge: 'الخطوة ٢ · تم الشراء',
+      s2_card_title: 'تم الشراء من المتجر · SHP-48213',
+      s2_card_desc: 'تم شراء طلبك بنجاح وهو جاهز للشحن السريع 🛍️',
+      s3_label: '٣. في الطريق جواً إلى مستودع أربيل',
+      s3_badge: 'الخطوة ٣ · قيد الشحن',
+      s3_card_title: 'في الطريق إلى أربيل · SHP-48213',
+      s3_card_desc: 'شحنتك في الطريق ويمكنك تتبعها لحظة بلحظة في التطبيق ✈️',
+      s4_label: '٤. وصل إلى أربيل ويتم توصيله لباب منزلك 📦',
+      s4_badge: 'تم التوصيل ✓',
+      s4_card_title: 'وصل إلى أربيل · SHP-48213',
+      s4_card_desc: 'مرحباً 👋 وصلت طلبيتك إلى أربيل وسنقوم بتوصيلها إليك اليوم 📦'
+    },
     hero: {
-      badge: 'اختر من ديسكفر داخل التطبيق أو أرسل رابطًا',
       title: '«أنت تختار، ونحن نشتريه ونوصله إليك»',
       subtitle: 'اختر أي منتج من قسم ديسكفر داخل تطبيقنا مع السعر النهائي الواصل إلى أربيل، أو أرسل رابط المنتج أو لقطة شاشة — نحن نشتريه لك بسعر نهائي واحد ونوصله إلى باب منزلك.',
       cta_app: 'حمّل التطبيق',
@@ -257,7 +301,7 @@ const translations = {
       }
     },
     how: {
-      badge: 'كيف يعمل',
+      badge: 'كيف يعمل · تتبّع تفاعلي مع التمرير',
       title: 'من الاختيار حتى باب منزلك في ٣ خطوات',
       subtitle: 'اختر ← نشتريه بسعر نهائي واحد ← تستلمه مع تتبّع مباشر',
       step1: {
@@ -394,8 +438,30 @@ const translations = {
       contact: 'Contact',
       cta: 'Download the app'
     },
+    tracker: {
+      live_header: 'Live Shipment Tracking · SHP-48213',
+      short1: 'Choose',
+      short2: 'We Buy',
+      short3: 'In Transit',
+      short4: 'Delivered 📦',
+      s1_label: '1. Choose on Discover or send a link',
+      s1_badge: 'Step 1 · Discover',
+      s1_card_title: 'Chosen on Discover · SHP-48213',
+      s1_card_desc: 'Item selected with one all-in final price of $48.00 to Erbil ✨',
+      s2_label: '2. Purchased at one final price (50% now)',
+      s2_badge: 'Step 2 · Purchased',
+      s2_card_title: 'Purchased from Store · SHP-48213',
+      s2_card_desc: 'Your item has been purchased and prepared for express dispatch 🛍️',
+      s3_label: '3. In air transit to Erbil warehouse',
+      s3_badge: 'Step 3 · In Transit',
+      s3_card_title: 'In Transit to Erbil · SHP-48213',
+      s3_card_desc: 'Your parcel is on the way with real-time GPS updates in the app ✈️',
+      s4_label: '4. Arrived in Erbil & out for delivery 📦',
+      s4_badge: 'Delivered ✓',
+      s4_card_title: 'Arrived in Erbil · SHP-48213',
+      s4_card_desc: 'Hi 👋 Your order has arrived in Erbil and will be delivered today 📦'
+    },
     hero: {
-      badge: 'Choose from Discover in the app or send a link',
       title: '“You choose, we buy it and bring it”',
       subtitle: 'Pick any product from Discover in the Shiply app with the final price to Erbil already shown, or send us a link or screenshot — we buy it for you at one final price and deliver it to your door.',
       cta_app: 'Download the app',
@@ -444,7 +510,7 @@ const translations = {
       }
     },
     how: {
-      badge: 'How It Works',
+      badge: 'How It Works · Live Scroll Tracking',
       title: 'From choosing to your doorstep in 3 simple steps',
       subtitle: 'Choose → We buy it at one final price → You receive it with live tracking',
       step1: {
@@ -570,6 +636,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
+  let activeLang = 'ku';
+  let currentStageIndex = 0;
+
   // --- Mobile Menu Drawer ---
   function openMobileMenu() {
     if (!mobileMenu || !mobileMenuOverlay) return;
@@ -603,20 +672,130 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // --- Sticky Navbar Scroll Shadow ---
-  if (navbar) {
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (window.scrollY > 16) {
-          navbar.classList.add('nav-scrolled');
+  // --- Smooth Scroll-Driven Shipment Box & Live Tracking Stepper ---
+  const stagePercentages = [14, 40, 68, 92];
+
+  window.setShipmentStage = function (stageIdx, customPercent) {
+    const idx = Math.max(0, Math.min(3, stageIdx));
+    currentStageIndex = idx;
+    const t = translations[activeLang]?.tracker;
+    if (!t) return;
+
+    const pct = typeof customPercent === 'number' ? Math.max(8, Math.min(94, customPercent)) : stagePercentages[idx];
+    const stageKeys = ['s1', 's2', 's3', 's4'];
+    const sk = stageKeys[idx];
+
+    // Hero Tracker Elements
+    const heroStatus = document.getElementById('hero-step-status');
+    const heroCounter = document.getElementById('hero-step-counter');
+    const heroFill = document.getElementById('hero-track-fill');
+    const heroBox = document.getElementById('hero-box-rider');
+
+    if (heroStatus) heroStatus.textContent = t[`${sk}_label`];
+    if (heroCounter) heroCounter.textContent = `0${idx + 1} / 04`;
+    if (heroFill) heroFill.style.width = `${pct}%`;
+    if (heroBox) heroBox.style.insetInlineStart = `${pct}%`;
+
+    // Hero Live Notification Card Elements
+    const liveTitle = document.getElementById('live-card-title');
+    const liveStep = document.getElementById('live-card-step');
+    const liveDesc = document.getElementById('live-card-desc');
+    const liveBar = document.getElementById('live-card-bar');
+
+    if (liveTitle) liveTitle.textContent = t[`${sk}_card_title`];
+    if (liveStep) liveStep.textContent = `${idx + 1} / 4`;
+    if (liveDesc) liveDesc.textContent = t[`${sk}_card_desc`];
+    if (liveBar) liveBar.style.width = `${pct}%`;
+
+    // Stage Pill Buttons in Hero
+    document.querySelectorAll('[data-stage-pill]').forEach((btn) => {
+      const bIdx = Number(btn.getAttribute('data-stage-pill'));
+      if (bIdx === idx) {
+        btn.className = 'py-1 px-1 rounded-lg text-[11px] font-bold bg-royal text-white transition-colors';
+      } else if (bIdx < idx) {
+        btn.className = 'py-1 px-1 rounded-lg text-[11px] font-bold bg-lime/40 text-night transition-colors';
+      } else {
+        btn.className = 'py-1 px-1 rounded-lg text-[11px] font-bold bg-paper text-night/75 hover:text-royal transition-colors';
+      }
+    });
+
+    // How It Works Sticky Scroll Rail Elements
+    const scrollTitle = document.getElementById('scroll-stage-title');
+    const scrollBadge = document.getElementById('scroll-stage-badge');
+    const scrollFill = document.getElementById('scroll-track-fill');
+    const scrollBox = document.getElementById('scroll-box-rider');
+
+    if (scrollTitle) scrollTitle.textContent = t[`${sk}_label`];
+    if (scrollBadge) scrollBadge.textContent = t[`${sk}_badge`];
+    if (scrollFill) scrollFill.style.width = `${pct}%`;
+    if (scrollBox) scrollBox.style.insetInlineStart = `${pct}%`;
+
+    // Highlight active step card in #how-it-works
+    const activeCardIndex = idx === 0 ? 0 : idx === 1 ? 1 : 2;
+    [0, 1, 2].forEach((cIdx) => {
+      const card = document.getElementById(`step-card-${cIdx}`);
+      if (card) {
+        if (cIdx === activeCardIndex) {
+          card.classList.add('is-current');
         } else {
-          navbar.classList.remove('nav-scrolled');
+          card.classList.remove('is-current');
         }
-      },
-      { passive: true }
-    );
+      }
+    });
+  };
+
+  // Drive shipment box position smoothly from window scroll (both scrolling down and up)
+  let ticking = false;
+  function onScrollUpdate() {
+    if (navbar) {
+      if (window.scrollY > 16) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    }
+
+    const howSection = document.getElementById('how-it-works');
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+
+    if (howSection) {
+      const rect = howSection.getBoundingClientRect();
+      // If #how-it-works is in or near the viewport, map its scroll progress smoothly (8% -> 94%)
+      if (rect.top < vh * 0.85 && rect.bottom > vh * 0.15) {
+        const totalTravel = rect.height + vh * 0.4;
+        const traveled = vh * 0.75 - rect.top;
+        const rawProgress = Math.max(0, Math.min(1, traveled / totalTravel));
+        const pct = 10 + rawProgress * 84;
+        const stageIdx = rawProgress < 0.28 ? 0 : rawProgress < 0.56 ? 1 : rawProgress < 0.82 ? 2 : 3;
+        window.setShipmentStage(stageIdx, pct);
+        ticking = false;
+        return;
+      }
+    }
+
+    // Also animate the Hero shipment box smoothly as the user scrolls through the top of the page
+    const heroMaxScroll = Math.max(420, vh * 0.75);
+    if (scrollY <= heroMaxScroll) {
+      const heroProgress = Math.max(0, Math.min(1, scrollY / heroMaxScroll));
+      const pct = 14 + heroProgress * 78;
+      const stageIdx = heroProgress < 0.22 ? 0 : heroProgress < 0.5 ? 1 : heroProgress < 0.78 ? 2 : 3;
+      window.setShipmentStage(stageIdx, pct);
+    }
+
+    ticking = false;
   }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(onScrollUpdate);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 
   // --- WhatsApp Form Submission ---
   const whatsappForm = document.getElementById('whatsapp-form');
@@ -638,6 +817,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Language Switcher (Default: Kurdish RTL) ---
   window.setLanguage = function (lang) {
     if (!translations[lang]) return;
+    activeLang = lang;
 
     const isRtl = lang === 'ku' || lang === 'ar';
     document.documentElement.lang = lang;
@@ -691,8 +871,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('text-night', 'hover:text-violet');
       }
     });
+
+    // Refresh current shipment stage text in the newly selected language
+    window.setShipmentStage(currentStageIndex);
   };
 
   // Initialize with Kurdish (default language)
   window.setLanguage('ku');
+  onScrollUpdate();
 });

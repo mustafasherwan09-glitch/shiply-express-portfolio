@@ -11,11 +11,11 @@
     content="ناونیشانی ئۆفیسی شیپلی ئێکسپرێس: شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق. کاتژمێرەکانی کارکردن: شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە." />
 
   <!-- Favicons & Manifest -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/site.webmanifest" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -24,7 +24,7 @@
     content="پەیوەندی و ناونیشانی ئۆفیس | شیپلی ئێکسپرێس — Shiply Express" />
   <meta property="og:description" id="og-description"
     content="شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق" />
-  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:image" content="./assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -59,8 +59,8 @@
     "openingHours": "Sa-Th 09:00-18:00"
   }
   </script>
-  <script type="module" crossorigin src="./assets/main-B9LMFJzj.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-B7tlHwiy.css">
+  <script type="module" crossorigin src="./assets/main2.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style.css">
 </head>
 
 <body class="bg-paper text-night antialiased selection:bg-violet selection:text-white">
@@ -72,7 +72,7 @@
 
         <a href="./" class="logo-clearspace flex items-center shrink-0 focus:outline-none"
           aria-label="Shiply Express Home">
-          <img src="./SVG/Shiply-Logo-Compact-Color.svg" alt="Shiply Express" width="164" height="50"
+          <img src="./assets/Shiply-Logo-Compact-Color.svg" alt="Shiply Express" width="164" height="50"
             class="brand-logo h-9 sm:h-10 w-auto" />
         </a>
 
@@ -121,10 +121,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Visit Our Office Header + Address + Hours -->
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span
-          class="inline-block px-3.5 py-1 rounded-full bg-white border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-          data-i18n="office.badge">ناونیشانی ئۆفیس</span>
+      <div class="text-start sm:text-center max-w-3xl mx-auto mb-12">
+        <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="office.badge">ناونیشانی ئۆفیس</div>
         <h1 class="text-3xl sm:text-5xl font-extrabold heading-royal mb-4" data-i18n="office.title">
           سەردانی ئۆفیسەکەمان بکە
         </h1>
@@ -159,7 +157,6 @@
 
       <!-- Contact Details Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Address Card -->
         <div class="brand-card text-start">
           <div class="text-xs font-bold text-violet uppercase mb-2" data-i18n="contact.address_label">ناونیشان · Location</div>
           <p class="text-sm sm:text-base font-extrabold text-royal" data-i18n="office.address">
@@ -167,7 +164,6 @@
           </p>
         </div>
 
-        <!-- Hours Card -->
         <div class="brand-card text-start">
           <div class="text-xs font-bold text-violet uppercase mb-2" data-i18n="office.hours_label">کاتژمێرەکانی کارکردن · Hours</div>
           <p class="text-sm sm:text-base font-extrabold text-royal" data-i18n="office.hours">
@@ -175,13 +171,11 @@
           </p>
         </div>
 
-        <!-- WhatsApp / Phone Card -->
         <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer" class="brand-card text-start block">
           <div class="text-xs font-bold text-violet uppercase mb-2" data-i18n="contact.whatsapp_label">واتسئەپ · WhatsApp</div>
           <p class="text-lg font-extrabold text-royal" dir="ltr">+964 750 949 0950</p>
         </a>
 
-        <!-- Email Card -->
         <a href="mailto:info@shiply-express.com" class="brand-card text-start block">
           <div class="text-xs font-bold text-violet uppercase mb-2" data-i18n="contact.email_label">ئیمەیڵ · Email</div>
           <p class="text-base sm:text-lg font-extrabold text-royal" dir="ltr">info@shiply-express.com</p>
@@ -199,19 +193,18 @@
         <div class="md:col-span-6 text-start">
           <div class="inline-flex flex-wrap items-center gap-4 mb-4">
             <div class="logo-clearspace bg-white/5 rounded-2xl border border-white/10">
-              <img src="./SVG/Shiply-Logo-Kurdish-White.svg" data-logo-ku="./SVG/Shiply-Logo-Kurdish-White.svg"
+              <img src="./assets/Shiply-Logo-Kurdish-White.svg" data-logo-ku="./SVG/Shiply-Logo-Kurdish-White.svg"
                 data-logo-default="./SVG/Shiply-Logo-White.svg" alt="Shiply Express Logo" width="148" height="56"
                 class="brand-logo h-10 w-auto" />
             </div>
             <div class="logo-clearspace">
-              <img src="./SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
+              <img src="./assets/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
                 class="brand-logo h-8 w-auto" />
             </div>
           </div>
           <p class="text-paper/80 text-sm sm:text-base max-w-md mb-4" data-i18n="footer.tagline">
             تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — لە فرۆشگاکانی تورکیا، چین، دوبەی و هەموو جیهانەوە بۆ بەردەم دەرگای ماڵەوەت.
           </p>
-          <!-- Plain-text Address & Hours in Footer -->
           <div class="space-y-1 text-xs sm:text-sm text-paper/85 border-t border-white/10 pt-4">
             <p data-i18n="office.address">شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق</p>
             <p class="text-paper/70" data-i18n="office.hours">شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە</p>

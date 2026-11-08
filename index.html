@@ -11,16 +11,15 @@
   <meta name="description" id="meta-description"
     content="تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین. کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە — بە یەک نرخی کۆتایی و نیوە ئێستا، نیوە لە کاتی گەیشتن لە تورکیا، چین، دوبەی و جیهانەوە بۆ هەولێر و کوردستان." />
 
-  <!-- Alternate Language Titles / Descriptions for Search Engines -->
   <meta name="keywords"
     content="Shiply Express, شیپلی ئێکسپرێس, شيبلي اكسبريس, بۆم بکڕە, دیسکەڤەر, کڕینی ئۆنلاین هەولێر, کوردستان, Shop for me Erbil, Discover app Iraq" />
 
   <!-- Favicons, Apple Touch Icon & PWA Manifest (from Shiply-App-Icon-1024.png) -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/site.webmanifest" />
 
   <!-- Open Graph / Social Share (1200x630 Logo on Night #1D1240 background) -->
   <meta property="og:type" content="website" />
@@ -29,7 +28,7 @@
     content="شیپلی ئێکسپرێس | تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — Shiply Express" />
   <meta property="og:description" id="og-description"
     content="کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە. ئێمە بە یەک نرخی کۆتایی دەیکڕین و دەیگەیەنینە دەستت — نیوە ئێستا، نیوە لە کاتی گەیشتن." />
-  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:image" content="./assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Shiply Express — تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین" />
@@ -43,7 +42,7 @@
     content="شیپلی ئێکسپرێس | تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — Shiply Express" />
   <meta name="twitter:description" id="twitter-description"
     content="کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە. نیوە ئێستا، نیوە لە کاتی گەیشتن." />
-  <meta name="twitter:image" content="./og-image.png" />
+  <meta name="twitter:image" content="./assets/og-image.png" />
 
   <!-- Google Fonts: Vazirmatn (Kurdish/Arabic) & Plus Jakarta Sans (English) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,8 +75,8 @@
     "openingHours": "Sa-Th 09:00-18:00"
   }
   </script>
-  <script type="module" crossorigin src="./assets/main-B9LMFJzj.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-B7tlHwiy.css">
+  <script type="module" crossorigin src="./assets/main2.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style.css">
 </head>
 
 <body class="bg-paper text-night antialiased selection:bg-violet selection:text-white">
@@ -85,7 +84,7 @@
   <!-- Loading Screen (Splash with Shiply-Mark-White.svg on Night #1D1240) -->
   <div id="loading-screen" role="status" aria-label="Loading Shiply Express">
     <div class="logo-clearspace-lg flex flex-col items-center gap-6">
-      <img src="./SVG/Shiply-Mark-White.svg" alt="Shiply Express Mark" width="84" height="88"
+      <img src="./assets/Shiply-Mark-White.svg" alt="Shiply Express Mark" width="84" height="88"
         class="brand-logo h-20 w-auto" />
       <div class="flex items-center gap-2.5" aria-hidden="true">
         <span class="loading-dot" style="animation-delay: 0s;"></span>
@@ -96,7 +95,6 @@
     </div>
   </div>
   <script>
-    // Dismiss loading screen smoothly as soon as DOM is interactive so LCP is never delayed
     window.addEventListener('DOMContentLoaded', function () {
       var loader = document.getElementById('loading-screen');
       if (loader) {
@@ -115,11 +113,11 @@
         <!-- Navbar Logo: SVG/Shiply-Logo-Compact-Color.svg with clear space -->
         <a href="#home" class="logo-clearspace flex items-center shrink-0 focus:outline-none"
           aria-label="Shiply Express Home">
-          <img src="./SVG/Shiply-Logo-Compact-Color.svg" alt="Shiply Express" width="164" height="50"
+          <img src="./assets/Shiply-Logo-Compact-Color.svg" alt="Shiply Express" width="164" height="50"
             class="brand-logo h-9 sm:h-10 w-auto" />
         </a>
 
-        <!-- Desktop Main Menu (No weight calculator / per-kilo prices) -->
+        <!-- Desktop Main Menu -->
         <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
           <a href="#services"
             class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
@@ -202,10 +200,9 @@
   <aside id="mobile-menu"
     class="fixed top-0 end-0 z-50 w-[85%] max-w-sm h-full bg-paper shadow-2xl transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col"
     aria-label="Mobile Navigation">
-    <!-- Dark Header inside Mobile Drawer using Shiply-Logo-Compact-White.svg -->
     <div class="bg-night px-5 py-4 flex items-center justify-between">
       <div class="logo-clearspace">
-        <img src="./SVG/Shiply-Logo-Compact-White.svg" alt="Shiply Express" width="148" height="45"
+        <img src="./assets/Shiply-Logo-Compact-White.svg" alt="Shiply Express" width="148" height="45"
           class="brand-logo h-8 w-auto" />
       </div>
       <button type="button" id="mobile-menu-close"
@@ -304,22 +301,56 @@
 
           <!-- Hero Text Column -->
           <div class="lg:col-span-7 text-start">
-            <!-- Hero Brand Lockup: Kurdish Logo on Kurdish view, switches to Shiply-Logo-Color.svg on EN/AR -->
+            <!-- Hero Brand Lockup -->
             <div class="inline-flex items-center bg-white border border-royal/10 rounded-2xl logo-clearspace-lg mb-6 shadow-xs">
-              <img id="hero-logo" src="./SVG/Shiply-Logo-Kurdish-Color.svg"
+              <img id="hero-logo" src="./assets/Shiply-Logo-Kurdish-Color.svg"
                 data-logo-ku="./SVG/Shiply-Logo-Kurdish-Color.svg"
                 data-logo-default="./SVG/Shiply-Logo-Color.svg"
                 alt="Shiply Express — شیپلی ئێکسپرێس" width="184" height="70"
                 class="brand-logo h-12 sm:h-14 w-auto" />
             </div>
 
-            <!-- Pill Badge -->
-            <div class="mb-4">
-              <span
-                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royal/8 border border-royal/15 text-royal text-xs sm:text-sm font-bold">
-                <span class="w-2 h-2 rounded-full bg-violet"></span>
-                <span data-i18n="hero.badge">لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک بنێرە</span>
-              </span>
+            <!-- Interactive Live Shipment Box Stepper (Replaces static pill; animates on scroll up/down or click) -->
+            <div class="bg-white border border-royal/12 rounded-2xl p-3.5 sm:p-4 mb-6 shadow-sm max-w-xl">
+              <div class="flex items-center justify-between text-xs font-extrabold text-royal mb-2.5">
+                <span id="hero-step-status" data-i18n="tracker.s1_label">١. هەڵبژاردن لە دیسکەڤەر یان لینک</span>
+                <span id="hero-step-counter" class="px-2 py-0.5 rounded-md bg-night text-lime font-mono text-[11px]" dir="ltr">01 / 04</span>
+              </div>
+
+              <!-- Animated Track with Moving Isometric Shiply Box -->
+              <div class="relative h-9 flex items-center px-3">
+                <div class="w-full h-2 bg-paper rounded-full overflow-hidden border border-royal/10">
+                  <div id="hero-track-fill" class="tracking-progress-fill h-full bg-violet rounded-full" style="width: 15%;"></div>
+                </div>
+
+                <!-- Moving Shiply Branded Parcel Box (Moves smoothly on scroll up/down) -->
+                <div id="hero-box-rider"
+                  class="shipment-box-rider absolute top-1/2 -translate-y-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-9 h-9 rounded-xl bg-night border-2 border-lime shadow-md flex items-center justify-center z-10"
+                  style="inset-inline-start: 15%;">
+                  <svg class="w-5 h-5 text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- 4 Interactive Stage Buttons -->
+              <div class="grid grid-cols-4 gap-1.5 mt-2 text-center">
+                <button type="button" onclick="setShipmentStage(0)" data-stage-pill="0"
+                  class="py-1 px-1 rounded-lg text-[11px] font-bold bg-royal text-white transition-colors"
+                  data-i18n="tracker.short1">هەڵبژێرە</button>
+                <button type="button" onclick="setShipmentStage(1)" data-stage-pill="1"
+                  class="py-1 px-1 rounded-lg text-[11px] font-bold bg-paper text-night/75 hover:text-royal transition-colors"
+                  data-i18n="tracker.short2">دەیکڕین</button>
+                <button type="button" onclick="setShipmentStage(2)" data-stage-pill="2"
+                  class="py-1 px-1 rounded-lg text-[11px] font-bold bg-paper text-night/75 hover:text-royal transition-colors"
+                  data-i18n="tracker.short3">بەڕێوەیە</button>
+                <button type="button" onclick="setShipmentStage(3)" data-stage-pill="3"
+                  class="py-1 px-1 rounded-lg text-[11px] font-bold bg-paper text-night/75 hover:text-royal transition-colors"
+                  data-i18n="tracker.short4">گەیشت 📦</button>
+              </div>
             </div>
 
             <!-- Main Headline: تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین -->
@@ -355,7 +386,7 @@
               </a>
             </div>
 
-            <!-- Key Value Pills (No per-kilo pricing!) -->
+            <!-- Key Value Highlights -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-royal/10">
               <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-royal/10">
                 <span class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center font-bold shrink-0">✓</span>
@@ -379,10 +410,10 @@
               <!-- Top Bar inside Dark Showcase Card -->
               <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/10">
                 <div class="logo-clearspace">
-                  <img src="./SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="140" height="46"
+                  <img src="./assets/Shiply-Logo-White.svg" alt="Shiply Express" width="140" height="46"
                     class="brand-logo h-8 w-auto" />
                 </div>
-                <span class="px-3 py-1 rounded-full bg-lime text-night text-xs font-extrabold"
+                <span class="px-3 py-1 rounded-lg bg-lime text-night text-xs font-extrabold"
                   data-i18n="hero.card_badge">دیسکەڤەر · Discover</span>
               </div>
 
@@ -418,22 +449,22 @@
                 </div>
               </div>
 
-              <!-- Live Tracking / WhatsApp Notification Preview (using Shiply-Mark-Color.svg) -->
+              <!-- Live Dynamic Tracking Card (Updates as you scroll up/down!) -->
               <div class="bg-paper text-night rounded-2xl p-4 flex items-center gap-3.5">
                 <div class="logo-clearspace bg-white rounded-xl border border-royal/10 shrink-0">
-                  <img src="./SVG/Shiply-Mark-Color.svg" alt="Shiply Mark" width="36" height="38"
+                  <img src="./assets/Shiply-Mark-Color.svg" alt="Shiply Mark" width="36" height="38"
                     class="brand-logo h-8 w-auto" />
                 </div>
                 <div class="min-w-0 flex-1 text-start">
                   <div class="flex items-center justify-between gap-2">
-                    <span class="text-xs font-extrabold text-royal" data-i18n="hero.track_title">گەیشتە هەولێر · SHP-48213</span>
-                    <span class="text-[11px] font-bold text-violet">3 / 4</span>
+                    <span id="live-card-title" class="text-xs font-extrabold text-royal" data-i18n="hero.track_title">گەیشتە هەولێر · SHP-48213</span>
+                    <span id="live-card-step" class="text-[11px] font-bold text-violet" dir="ltr">4 / 4</span>
                   </div>
-                  <p class="text-xs text-night/80 truncate mt-0.5" data-i18n="hero.track_desc">
+                  <p id="live-card-desc" class="text-xs text-night/80 truncate mt-0.5" data-i18n="hero.track_desc">
                     سڵاو 👋 بارەکەت گەیشتە هەولێر و ئەمڕۆ دەیگەیەنینە دەستت 📦
                   </p>
                   <div class="w-full h-1.5 bg-royal/10 rounded-full mt-2 overflow-hidden">
-                    <div class="w-3/4 h-full bg-violet rounded-full"></div>
+                    <div id="live-card-bar" class="tracking-progress-fill w-full h-full bg-violet rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -448,9 +479,8 @@
     <!-- 2. SERVICES SECTION -->
     <section id="services" class="py-16 sm:py-24 bg-white border-y border-royal/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-            data-i18n="services.badge">خزمەتگوزارییەکانمان</span>
+        <div class="text-start sm:text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="services.badge">خزمەتگوزارییەکانمان</div>
           <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="services.title">
             چوار ڕێگەی ئاسان بۆ کڕین لە هەموو جیهانەوە
           </h2>
@@ -591,12 +621,11 @@
       </div>
     </section>
 
-    <!-- 3. HOW IT WORKS SECTION -->
+    <!-- 3. HOW IT WORKS: SCROLL-DRIVEN SHIPMENT BOX & LIVE TRACKING JOURNEY -->
     <section id="how-it-works" class="py-16 sm:py-24 bg-paper">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-white border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-            data-i18n="how.badge">چۆن کاردەکات</span>
+        <div class="text-start sm:text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="how.badge">چۆن کاردەکات · زیندوو لەگەڵ سکرۆڵ</div>
           <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="how.title">
             لە هەڵبژاردنەوە تا بەردەم دەرگای ماڵەوەت بە ٣ هەنگاو
           </h2>
@@ -605,12 +634,53 @@
           </p>
         </div>
 
+        <!-- Sticky Scroll-Driven Shipment Box Rail -->
+        <div class="sticky top-22 z-30 bg-night text-white rounded-2xl p-4 sm:p-6 mb-10 shadow-xl border border-violet/40">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+              <div class="logo-clearspace bg-white/10 rounded-xl">
+                <img src="./assets/Shiply-Mark-White.svg" alt="Shiply Mark" width="28" height="30"
+                  class="brand-logo h-6 w-auto" />
+              </div>
+              <div>
+                <span class="block text-xs text-lime font-bold" data-i18n="tracker.live_header">بەدواداچوونی زیندوو · SHP-48213</span>
+                <strong id="scroll-stage-title" class="text-sm sm:text-base font-extrabold text-white" data-i18n="tracker.s1_label">
+                  ١. هەڵبژاردن لە دیسکەڤەر یان لینک
+                </strong>
+              </div>
+            </div>
+            <span id="scroll-stage-badge" class="px-3 py-1 rounded-lg bg-lime text-night text-xs font-extrabold"
+              data-i18n="tracker.s1_badge">هەنگاوی ١ لە ٣</span>
+          </div>
+
+          <!-- Interactive Progress Rail where the Branded Shipment Box glides on scroll up & down -->
+          <div class="relative h-12 flex items-center px-4">
+            <div class="w-full h-2.5 bg-white/15 rounded-full overflow-hidden">
+              <div id="scroll-track-fill" class="tracking-progress-fill h-full bg-lime rounded-full" style="width: 16%;"></div>
+            </div>
+
+            <!-- The Moving 3D Shiply Branded Box -->
+            <div id="scroll-box-rider"
+              class="shipment-box-rider absolute top-1/2 -translate-y-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-11 h-11 rounded-2xl bg-royal border-2 border-lime shadow-lg flex items-center justify-center z-10"
+              style="inset-inline-start: 16%;">
+              <svg class="w-6 h-6 text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                <path d="m3.3 7 8.7 5 8.7-5" />
+                <path d="M12 22V12" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Step Cards that highlight dynamically as you scroll down & up -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 relative">
           <!-- Step 1: Choose -->
-          <div class="brand-card relative text-start flex flex-col justify-between">
+          <div id="step-card-0" class="brand-card scroll-step-card is-current relative text-start flex flex-col justify-between cursor-pointer"
+            onclick="setShipmentStage(0)">
             <div>
               <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">1</span>
+                <span class="step-badge-num w-12 h-12 rounded-2xl bg-royal text-white font-extrabold text-xl flex items-center justify-center transition-colors">1</span>
                 <svg class="w-6 h-6 text-violet hidden lg:block rtl:rotate-180" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
                   aria-hidden="true">
@@ -631,10 +701,11 @@
           </div>
 
           <!-- Step 2: We buy it at one final price -->
-          <div class="brand-card relative text-start flex flex-col justify-between">
+          <div id="step-card-1" class="brand-card scroll-step-card relative text-start flex flex-col justify-between cursor-pointer"
+            onclick="setShipmentStage(1)">
             <div>
               <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">2</span>
+                <span class="step-badge-num w-12 h-12 rounded-2xl bg-royal text-white font-extrabold text-xl flex items-center justify-center transition-colors">2</span>
                 <svg class="w-6 h-6 text-violet hidden lg:block rtl:rotate-180" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
                   aria-hidden="true">
@@ -655,10 +726,11 @@
           </div>
 
           <!-- Step 3: You receive it with live tracking -->
-          <div class="brand-card relative text-start flex flex-col justify-between">
+          <div id="step-card-2" class="brand-card scroll-step-card relative text-start flex flex-col justify-between cursor-pointer"
+            onclick="setShipmentStage(3)">
             <div>
               <div class="flex items-center justify-between mb-6">
-                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">3</span>
+                <span class="step-badge-num w-12 h-12 rounded-2xl bg-royal text-white font-extrabold text-xl flex items-center justify-center transition-colors">3</span>
                 <span class="px-3 py-1 rounded-lg bg-royal/10 text-royal text-xs font-bold" data-i18n="how.step3.badge">LIVE</span>
               </div>
               <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-3" data-i18n="how.step3.title">
@@ -682,9 +754,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
           <div class="lg:col-span-7 text-start">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-lime/30 text-lime text-xs sm:text-sm font-bold mb-5">
-              <span class="w-2 h-2 rounded-full bg-lime"></span>
-              <span data-i18n="payment.badge">شێوازی پارەدانی ئاسان و جێی متمانە</span>
+            <div class="text-xs font-extrabold text-lime uppercase tracking-widest mb-3" data-i18n="payment.badge">
+              شێوازی پارەدانی ئاسان و جێی متمانە
             </div>
 
             <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-5" data-i18n="payment.title">
@@ -709,7 +780,6 @@
 
           <div class="lg:col-span-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <!-- 50% Now Card -->
               <div class="brand-card-dark text-start">
                 <span class="inline-block px-3 py-1 rounded-lg bg-lime text-night text-xs font-extrabold mb-4">50%</span>
                 <h3 class="text-xl font-extrabold text-white mb-2" data-i18n="payment.half1_title">نیوە ئێستا</h3>
@@ -718,7 +788,6 @@
                 </p>
               </div>
 
-              <!-- 50% On Delivery Card -->
               <div class="brand-card-dark text-start">
                 <span class="inline-block px-3 py-1 rounded-lg bg-violet text-white text-xs font-extrabold mb-4">50%</span>
                 <h3 class="text-xl font-extrabold text-white mb-2" data-i18n="payment.half2_title">نیوە لە کاتی گەیشتن</h3>
@@ -728,10 +797,9 @@
               </div>
             </div>
 
-            <!-- Kurdish White Logo Lockup inside Night section -->
             <div class="mt-4 bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between">
               <div class="logo-clearspace">
-                <img src="./SVG/Shiply-Logo-Kurdish-White.svg" alt="شیپلی ئێکسپرێس" width="130" height="49"
+                <img src="./assets/Shiply-Logo-Kurdish-White.svg" alt="شیپلی ئێکسپرێس" width="130" height="49"
                   class="brand-logo h-9 w-auto" />
               </div>
               <span class="text-xs font-bold text-lime" data-i18n="payment.guarantee">١٠٠٪ گەرەنتی گەیشتن</span>
@@ -745,9 +813,8 @@
     <!-- 5. STORES WORLDWIDE SECTION -->
     <section id="stores" class="py-16 sm:py-24 bg-white border-b border-royal/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-            data-i18n="stores.badge">فرۆشگا جیهانییەکان</span>
+        <div class="text-start sm:text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="stores.badge">فرۆشگا جیهانییەکان</div>
           <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="stores.title">
             ئێمە لە فرۆشگاکانی تورکیا، چین، دوبەی و هەموو جیهانەوە دەکڕین
           </h2>
@@ -757,7 +824,6 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Turkey -->
           <div class="brand-card bg-paper/50 text-start">
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">TR</span>
@@ -775,7 +841,6 @@
             </div>
           </div>
 
-          <!-- China -->
           <div class="brand-card bg-paper/50 text-start">
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">CN</span>
@@ -793,7 +858,6 @@
             </div>
           </div>
 
-          <!-- Dubai -->
           <div class="brand-card bg-paper/50 text-start">
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">AE</span>
@@ -811,7 +875,6 @@
             </div>
           </div>
 
-          <!-- Worldwide -->
           <div class="brand-card bg-paper/50 text-start">
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">GLOBAL</span>
@@ -838,10 +901,9 @@
         <div class="bg-night rounded-3xl p-6 sm:p-10 lg:p-14 text-white shadow-2xl overflow-hidden">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-            <!-- Left / Start Content -->
             <div class="lg:col-span-7 text-start">
               <div class="logo-clearspace inline-block bg-white/5 rounded-2xl border border-white/10 mb-6">
-                <img src="./SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="156" height="52"
+                <img src="./assets/Shiply-Logo-White.svg" alt="Shiply Express" width="156" height="52"
                   class="brand-logo h-10 w-auto" />
               </div>
 
@@ -868,9 +930,7 @@
                 </li>
               </ul>
 
-              <!-- Store Buttons -->
               <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <!-- App Store Live Link -->
                 <a href="https://apps.apple.com/iq/app/shiply-express/id6756037985" target="_blank"
                   rel="noopener noreferrer" class="btn-primary">
                   <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -884,7 +944,6 @@
                   </div>
                 </a>
 
-                <!-- Google Play (Coming Soon as requested) -->
                 <div role="button" aria-disabled="true"
                   class="btn-ghost-dark opacity-85 cursor-not-allowed select-none"
                   title="Coming Soon on Google Play">
@@ -900,15 +959,14 @@
               </div>
             </div>
 
-            <!-- Right / End App Preview WebP Images -->
             <div class="lg:col-span-5 flex justify-center">
               <div class="grid grid-cols-2 gap-4 max-w-sm w-full">
                 <div class="bg-paper rounded-2xl p-2 shadow-lg border border-white/15">
-                  <img src="./images/platform/app1.webp" alt="Shiply Express App Home Screen" width="270" height="585"
+                  <img src="./assets/app1.webp" alt="Shiply Express App Home Screen" width="270" height="585"
                     loading="lazy" decoding="async" class="w-full h-auto rounded-xl object-cover" />
                 </div>
                 <div class="bg-paper rounded-2xl p-2 shadow-lg border border-white/15 mt-6">
-                  <img src="./images/platform/app3.webp" alt="Shiply Express App Tracking Screen" width="270" height="585"
+                  <img src="./assets/app3.webp" alt="Shiply Express App Tracking Screen" width="270" height="585"
                     loading="lazy" decoding="async" class="w-full h-auto rounded-xl object-cover" />
                 </div>
               </div>
@@ -922,9 +980,8 @@
     <!-- 7. FAQ SECTION -->
     <section id="faq" class="py-16 sm:py-24 bg-white border-t border-royal/10">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-16">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-            data-i18n="faq.badge">پرسیارە باوەکان</span>
+        <div class="text-start sm:text-center mb-12 sm:mb-16">
+          <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="faq.badge">پرسیارە باوەکان</div>
           <h2 class="text-2xl sm:text-4xl font-extrabold heading-royal mb-4" data-i18n="faq.title">
             وەڵامی هەموو پرسیارەکانت
           </h2>
@@ -934,7 +991,6 @@
         </div>
 
         <div class="space-y-4">
-          <!-- FAQ 1 -->
           <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden" open>
             <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
               <span data-i18n="faq.q1">چۆن دەتوانم لە ڕێگەی شیپلی ئێکسپرێسەوە داواکاری بکەم؟</span>
@@ -949,7 +1005,6 @@
             </div>
           </details>
 
-          <!-- FAQ 2 -->
           <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
             <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
               <span data-i18n="faq.q2">چۆن نرخی کۆتایی کاڵاکەم دەزانم؟</span>
@@ -964,7 +1019,6 @@
             </div>
           </details>
 
-          <!-- FAQ 3 -->
           <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
             <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
               <span data-i18n="faq.q3">شێوازی پارەدانی «نیوە ئێستا، نیوە لە کاتی گەیشتن» چۆنە؟</span>
@@ -979,7 +1033,6 @@
             </div>
           </details>
 
-          <!-- FAQ 4 -->
           <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
             <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
               <span data-i18n="faq.q4">لە کام وڵات و فرۆشگایانەوە کاڵا دەکڕن؟</span>
@@ -997,15 +1050,13 @@
       </div>
     </section>
 
-    <!-- 8. CONTACT SECTION (WhatsApp, Instagram, Direct Message Form) -->
+    <!-- 8. CONTACT SECTION -->
     <section id="contact" class="py-16 sm:py-24 bg-paper border-t border-royal/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 
-          <!-- Contact Channels -->
           <div class="lg:col-span-6 text-start">
-            <span class="inline-block px-3.5 py-1 rounded-full bg-white border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-              data-i18n="contact.badge">پەیوەندیمان پێوە بکە</span>
+            <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="contact.badge">پەیوەندیمان پێوە بکە</div>
             <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="contact.title">
               لە واتسئەپ و ئینستاگرام لەگەڵتانین
             </h2>
@@ -1014,7 +1065,6 @@
             </p>
 
             <div class="space-y-4">
-              <!-- WhatsApp Direct Card -->
               <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
                 class="brand-card flex items-center justify-between gap-4 !p-5">
                 <div class="flex items-center gap-4">
@@ -1036,7 +1086,6 @@
                 </svg>
               </a>
 
-              <!-- Instagram Direct Card -->
               <a href="https://www.instagram.com/shiply.iraq/" target="_blank" rel="noopener noreferrer"
                 class="brand-card flex items-center justify-between gap-4 !p-5">
                 <div class="flex items-center gap-4">
@@ -1060,7 +1109,6 @@
                 </svg>
               </a>
 
-              <!-- Email Direct Card -->
               <a href="mailto:info@shiply-express.com"
                 class="brand-card flex items-center justify-between gap-4 !p-5">
                 <div class="flex items-center gap-4">
@@ -1083,7 +1131,6 @@
                 </svg>
               </a>
 
-              <!-- Address Card -->
               <a href="https://www.google.com/maps/dir/?api=1&destination=36.2004780,44.0392230" target="_blank"
                 rel="noopener noreferrer" class="brand-card flex items-center justify-between gap-4 !p-5">
                 <div class="flex items-center gap-4">
@@ -1109,7 +1156,6 @@
             </div>
           </div>
 
-          <!-- Quick WhatsApp Order / Message Form -->
           <div class="lg:col-span-6">
             <div class="brand-card !p-6 sm:!p-8 text-start">
               <div class="flex items-center justify-between gap-3 mb-6">
@@ -1122,7 +1168,7 @@
                   </p>
                 </div>
                 <div class="logo-clearspace bg-paper rounded-xl">
-                  <img src="./SVG/Shiply-Mark-Color.svg" alt="Shiply Mark" width="32" height="34"
+                  <img src="./assets/Shiply-Mark-Color.svg" alt="Shiply Mark" width="32" height="34"
                     class="brand-logo h-7 w-auto" />
                 </div>
               </div>
@@ -1172,10 +1218,8 @@
     <!-- 9. VISIT OUR OFFICE SECTION (Above the Footer) -->
     <section id="office" class="py-16 sm:py-24 bg-white border-t border-royal/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span
-            class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
-            data-i18n="office.badge">ناونیشانی ئۆفیس</span>
+        <div class="text-start sm:text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div class="text-xs font-extrabold text-violet uppercase tracking-widest mb-2" data-i18n="office.badge">ناونیشانی ئۆفیس</div>
           <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="office.title">
             سەردانی ئۆفیسەکەمان بکە
           </h2>
@@ -1216,18 +1260,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
 
-        <!-- Brand Column -->
         <div class="md:col-span-5 text-start">
           <div class="inline-flex flex-wrap items-center gap-4 mb-4">
             <div class="logo-clearspace bg-white/5 rounded-2xl border border-white/10">
-              <img id="footer-logo" src="./SVG/Shiply-Logo-Kurdish-White.svg"
+              <img id="footer-logo" src="./assets/Shiply-Logo-Kurdish-White.svg"
                 data-logo-ku="./SVG/Shiply-Logo-Kurdish-White.svg"
                 data-logo-default="./SVG/Shiply-Logo-White.svg"
                 alt="Shiply Express Logo" width="148" height="56"
                 class="brand-logo h-10 w-auto" />
             </div>
             <div class="logo-clearspace">
-              <img src="./SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
+              <img src="./assets/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
                 class="brand-logo h-8 w-auto" />
             </div>
           </div>
@@ -1244,7 +1287,6 @@
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="md:col-span-4 text-start">
           <h3 class="text-sm font-extrabold text-lime uppercase tracking-wider mb-4" data-i18n="footer.links_title">بەستەرە خێراکان</h3>
           <ul class="grid grid-cols-2 gap-2.5 text-sm text-paper/80">
@@ -1258,7 +1300,6 @@
           </ul>
         </div>
 
-        <!-- Social & Contact -->
         <div class="md:col-span-3 text-start">
           <h3 class="text-sm font-extrabold text-lime uppercase tracking-wider mb-4" data-i18n="footer.connect_title">پەیوەندی</h3>
           <div class="flex items-center gap-3 mb-4">
