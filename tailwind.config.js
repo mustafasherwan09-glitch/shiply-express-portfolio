@@ -2,6 +2,7 @@
 export default {
   content: [
     "./index.html",
+    "./contact.html",
     "./404.html",
     "./email-template.html",
     "./src/**/*.{js,ts,jsx,tsx}",

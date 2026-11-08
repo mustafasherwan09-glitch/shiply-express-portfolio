@@ -51,6 +51,31 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data: Organization, Address, Geo & Opening Hours -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shiply Express",
+    "alternateName": ["شیپلی ئێکسپرێس", "شيبلي إكسبريس"],
+    "email": "info@shiply-express.com",
+    "telephone": "+9647509490950",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "40 Meter Street, Brayati, near Pharma",
+      "addressLocality": "Erbil",
+      "addressRegion": "Kurdistan Region",
+      "addressCountry": "IQ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.2004780,
+      "longitude": 44.0392230
+    },
+    "openingHours": "Sa-Th 09:00-18:00"
+  }
+  </script>
 </head>
 
 <body class="bg-paper text-night antialiased selection:bg-violet selection:text-white">
@@ -1033,8 +1058,31 @@
                 </svg>
               </a>
 
+              <!-- Email Direct Card -->
+              <a href="mailto:info@shiply-express.com"
+                class="brand-card flex items-center justify-between gap-4 !p-5">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-royal text-lime flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-violet uppercase" data-i18n="contact.email_label">ئیمەیڵ · Email</div>
+                    <div class="text-base sm:text-lg font-extrabold text-royal" dir="ltr">info@shiply-express.com</div>
+                  </div>
+                </div>
+                <svg class="w-5 h-5 text-violet rtl:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+
               <!-- Address Card -->
-              <a href="https://maps.google.com/?q=E1+Tower,+60m+Street,+Erbil,+Iraq" target="_blank"
+              <a href="https://www.google.com/maps/dir/?api=1&destination=36.2004780,44.0392230" target="_blank"
                 rel="noopener noreferrer" class="brand-card flex items-center justify-between gap-4 !p-5">
                 <div class="flex items-center gap-4">
                   <div class="w-12 h-12 rounded-2xl bg-royal text-white flex items-center justify-center shrink-0">
@@ -1046,7 +1094,8 @@
                   </div>
                   <div>
                     <div class="text-xs font-bold text-violet uppercase" data-i18n="contact.address_label">ناونیشان · Location</div>
-                    <div class="text-base sm:text-lg font-extrabold text-royal" data-i18n="contact.address_val">هەولێر، شەقامی ٦٠ مەتری، تاوەری E1</div>
+                    <div class="text-sm sm:text-base font-extrabold text-royal" data-i18n="office.address">شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق</div>
+                    <div class="text-xs text-night/75 mt-1 font-semibold" data-i18n="office.hours">شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە</div>
                   </div>
                 </div>
                 <svg class="w-5 h-5 text-violet rtl:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none"
@@ -1117,6 +1166,47 @@
         </div>
       </div>
     </section>
+
+    <!-- 9. VISIT OUR OFFICE SECTION (Above the Footer) -->
+    <section id="office" class="py-16 sm:py-24 bg-white border-t border-royal/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <span
+            class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+            data-i18n="office.badge">ناونیشانی ئۆفیس</span>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="office.title">
+            سەردانی ئۆفیسەکەمان بکە
+          </h2>
+          <p class="text-base sm:text-lg font-bold text-royal mb-2" data-i18n="office.address">
+            شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق
+          </p>
+          <p class="text-sm sm:text-base font-semibold text-night/75" data-i18n="office.hours">
+            شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە
+          </p>
+        </div>
+
+        <!-- Map Frame with Rounded Corners & Brand Colors (320px mobile, 400px desktop) -->
+        <div class="rounded-3xl p-2 sm:p-3 bg-night border-2 border-violet shadow-xl overflow-hidden">
+          <div class="rounded-2xl overflow-hidden bg-paper">
+            <iframe src="https://www.google.com/maps?q=36.2004780,44.0392230&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Shiply Express office map"
+              class="w-full h-[320px] md:h-[400px] border-0 block"></iframe>
+          </div>
+        </div>
+
+        <!-- Below the map: Get directions button -->
+        <div class="mt-6 flex justify-center">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=36.2004780,44.0392230" target="_blank"
+            rel="noopener noreferrer" class="btn-primary">
+            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="3 11 22 2 13 21 11 13 3 11" />
+            </svg>
+            <span data-i18n="office.directions">ئاراستەی ڕێگا وەربگرە</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER (Night #1D1240 background, White & Kurdish-White SVG Logos) -->
@@ -1139,12 +1229,17 @@
                 class="brand-logo h-8 w-auto" />
             </div>
           </div>
-          <p class="text-paper/80 text-sm sm:text-base max-w-sm mb-6" data-i18n="footer.tagline">
+          <p class="text-paper/80 text-sm sm:text-base max-w-sm mb-4" data-i18n="footer.tagline">
             تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — لە فرۆشگاکانی تورکیا، چین، دوبەی و هەموو جیهانەوە بۆ بەردەم دەرگای ماڵەوەت.
           </p>
-          <p class="text-xs font-bold text-lime" data-i18n="footer.payment_note">
+          <p class="text-xs font-bold text-lime mb-4" data-i18n="footer.payment_note">
             «نیوە ئێستا، نیوە لە کاتی گەیشتن»
           </p>
+          <!-- Plain-text Address & Hours in Footer -->
+          <div class="space-y-1 text-xs sm:text-sm text-paper/85 border-t border-white/10 pt-4">
+            <p data-i18n="office.address">شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق</p>
+            <p class="text-paper/70" data-i18n="office.hours">شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە</p>
+          </div>
         </div>
 
         <!-- Quick Links -->
@@ -1157,6 +1252,7 @@
             <li><a href="#stores" class="hover:text-lime transition-colors" data-i18n="nav.stores">فرۆشگاکان</a></li>
             <li><a href="#download" class="hover:text-lime transition-colors" data-i18n="nav.app">داگرتنی ئەپ</a></li>
             <li><a href="#faq" class="hover:text-lime transition-colors" data-i18n="nav.faq">پرسیارە باوەکان</a></li>
+            <li><a href="/contact.html" class="hover:text-lime transition-colors" data-i18n="nav.contact">پەیوەندی</a></li>
           </ul>
         </div>
 
@@ -1191,9 +1287,9 @@
               </svg>
             </a>
           </div>
-          <a href="mailto:shiplyiraq.express@gmail.com"
+          <a href="mailto:info@shiply-express.com"
             class="block text-xs text-paper/75 hover:text-lime transition-colors" dir="ltr">
-            shiplyiraq.express@gmail.com
+            info@shiply-express.com
           </a>
         </div>
 

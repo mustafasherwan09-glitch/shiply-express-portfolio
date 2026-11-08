@@ -154,8 +154,17 @@ const translations = {
       subtitle: 'لینک یان وێنەی کاڵاکەت بنێرە یان هەر پرسیارێکت هەیە ڕاستەوخۆ نامەمان بۆ بنێرە، تیمەکەمان بە خێرایی وەڵامت دەداتەوە.',
       whatsapp_label: 'واتسئەپ · WhatsApp',
       instagram_label: 'ئینستاگرام · Instagram',
+      email_label: 'ئیمەیڵ · Email',
       address_label: 'ناونیشان · Location',
-      address_val: 'هەولێر، شەقامی ٦٠ مەتری، تاوەری E1'
+      address_val: 'شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق'
+    },
+    office: {
+      badge: 'ناونیشانی ئۆفیس',
+      title: 'سەردانی ئۆفیسەکەمان بکە',
+      address: 'شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق',
+      hours_label: 'کاتژمێرەکانی کارکردن · Hours',
+      hours: 'شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە',
+      directions: 'ئاراستەی ڕێگا وەربگرە'
     },
     form: {
       title: 'داواکاری یان نامە بنێرە',
@@ -332,8 +341,17 @@ const translations = {
       subtitle: 'أرسل رابط أو صورة المنتج أو أي استفسار وسيرد عليك فريقنا فوراً.',
       whatsapp_label: 'واتساب · WhatsApp',
       instagram_label: 'إنستغرام · Instagram',
+      email_label: 'البريد الإلكتروني · Email',
       address_label: 'العنوان · Location',
-      address_val: 'أربيل، شارع ٦٠ متري، برج E1'
+      address_val: 'شارع ٤٠ متري، برايتي، قرب فارما، أربيل، إقليم كوردستان، العراق'
+    },
+    office: {
+      badge: 'موقع المكتب',
+      title: 'تفضل بزيارة مكتبنا',
+      address: 'شارع ٤٠ متري، برايتي، قرب فارما، أربيل، إقليم كوردستان، العراق',
+      hours_label: 'ساعات العمل · Hours',
+      hours: 'السبت–الخميس ٠٩:٠٠–١٨:٠٠، الجمعة مغلق',
+      directions: 'احصل على الاتجاهات'
     },
     form: {
       title: 'أرسل طلباً أو رسالة',
@@ -510,8 +528,17 @@ const translations = {
       subtitle: 'Send us a product link, screenshot, or any question — our team replies quickly.',
       whatsapp_label: 'WhatsApp · واتسئەپ',
       instagram_label: 'Instagram · ئینستاگرام',
+      email_label: 'Email · ئیمەیڵ',
       address_label: 'Location · ناونیشان',
-      address_val: 'E1 Tower, 60m Street, Erbil, Kurdistan'
+      address_val: '40 Meter Street, Brayati, near Pharma, Erbil, Kurdistan Region, Iraq'
+    },
+    office: {
+      badge: 'Office Location',
+      title: 'Visit our office',
+      address: '40 Meter Street, Brayati, near Pharma, Erbil, Kurdistan Region, Iraq',
+      hours_label: 'Opening Hours · کاتژمێرەکان',
+      hours: 'Saturday–Thursday 09:00–18:00, Friday closed',
+      directions: 'Get directions'
     },
     form: {
       title: 'Send an Order or Message',

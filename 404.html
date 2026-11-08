@@ -31,6 +31,31 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
+
+  <!-- JSON-LD Structured Data: Address & Geo (36.2004780, 44.0392230) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shiply Express",
+    "alternateName": ["شیپلی ئێکسپرێس", "شيبلي إكسبريس"],
+    "email": "info@shiply-express.com",
+    "telephone": "+9647509490950",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "40 Meter Street, Brayati, near Pharma",
+      "addressLocality": "Erbil",
+      "addressRegion": "Kurdistan Region",
+      "addressCountry": "IQ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.2004780,
+      "longitude": 44.0392230
+    },
+    "openingHours": "Sa-Th 09:00-18:00"
+  }
+  </script>
 </head>
 
 <body class="bg-paper text-night min-h-screen flex flex-col justify-between antialiased">
@@ -84,14 +109,27 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-night text-white py-8 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="logo-clearspace">
-        <img src="/SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
-          class="brand-logo h-8 w-auto" />
+  <!-- Footer (Plain-text Address & Hours on Every Page) -->
+  <footer class="bg-night text-white py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="text-start space-y-2">
+        <div class="logo-clearspace inline-block">
+          <img src="/SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
+            class="brand-logo h-8 w-auto" />
+        </div>
+        <p id="t-address" class="text-xs sm:text-sm text-paper/85">
+          شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق
+        </p>
+        <p id="t-hours" class="text-xs text-paper/70">
+          شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە
+        </p>
       </div>
-      <p id="t-rights" class="text-xs text-paper/75">© 2026 Shiply Express — هەموو مافەکان پارێزراون.</p>
+      <div class="text-start md:text-end space-y-1">
+        <a href="mailto:info@shiply-express.com" class="block text-xs text-paper/85 hover:text-lime transition-colors" dir="ltr">
+          info@shiply-express.com
+        </a>
+        <p id="t-rights" class="text-xs text-paper/75">© 2026 Shiply Express — هەموو مافەکان پارێزراون.</p>
+      </div>
     </div>
   </footer>
 
@@ -103,6 +141,8 @@
         desc: 'ببورە، ئەو بەستەرەی بەدوایدا دەگەڕێیت بوونی نییە یان گواستراوەتەوە. دەتوانیت بگەڕێیتەوە بۆ پەڕەی سەرەکی یان لە واتسئەپ نامەمان بۆ بنێریت.',
         home: 'گەڕانەوە بۆ سەرەکی',
         wa: 'نامەمان بۆ بنێرە',
+        address: 'شەقامی ٤٠ مەتری، بەرایەتی، نزیک فارما، هەولێر، هەرێمی کوردستان، عێراق',
+        hours: 'شەممە–پێنجشەممە ٠٩:٠٠–١٨:٠٠، هەینی داخراوە',
         rights: '© 2026 Shiply Express — هەموو مافەکان پارێزراون.'
       },
       ar: {
@@ -111,6 +151,8 @@
         desc: 'عذراً، الرابط الذي تبحث عنه غير موجود أو تم نقله. يمكنك العودة إلى الصفحة الرئيسية أو مراسلتنا عبر واتساب.',
         home: 'العودة للرئيسية',
         wa: 'راسلنا الآن',
+        address: 'شارع ٤٠ متري، برايتي، قرب فارما، أربيل، إقليم كوردستان، العراق',
+        hours: 'السبت–الخميس ٠٩:٠٠–١٨:٠٠، الجمعة مغلق',
         rights: '© 2026 Shiply Express — جميع الحقوق محفوظة.'
       },
       en: {
@@ -119,6 +161,8 @@
         desc: 'Sorry, the page you are looking for doesn’t exist or has been moved. Head back to the homepage or message us on WhatsApp.',
         home: 'Back to Homepage',
         wa: 'Message us',
+        address: '40 Meter Street, Brayati, near Pharma, Erbil, Kurdistan Region, Iraq',
+        hours: 'Saturday–Thursday 09:00–18:00, Friday closed',
         rights: '© 2026 Shiply Express. All rights reserved.'
       }
     };
@@ -132,6 +176,8 @@
       document.getElementById('t-desc').textContent = c.desc;
       document.getElementById('t-home').textContent = c.home;
       document.getElementById('t-wa').textContent = c.wa;
+      document.getElementById('t-address').textContent = c.address;
+      document.getElementById('t-hours').textContent = c.hours;
       document.getElementById('t-rights').textContent = c.rights;
 
       ['ku', 'ar', 'en'].forEach(function (k) {
@@ -147,4 +193,3 @@
 </body>
 
 </html>
-
