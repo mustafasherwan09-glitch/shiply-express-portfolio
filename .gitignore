@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+Shiply-Express-Logo-Pack/
 
 # Editor directories and files
 .vscode/*

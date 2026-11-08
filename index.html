@@ -1,688 +1,1218 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="ku" dir="rtl" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/images/logo-purple.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SHIPLY - Next Gen Logistics</title>
-  <meta name="description"
-    content="Seamless Shipping, Delivered. SHIPLY provides luxury logistics services, real-time tracking, and digital supply chain solutions." />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="theme-color" content="#1D1240" />
+
+  <!-- Primary Title & Description (Default: Kurdish, updated dynamically per language) -->
+  <title>شیپلی ئێکسپرێس | تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — Shiply Express</title>
+  <meta name="description" id="meta-description"
+    content="تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین. کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە — بە یەک نرخی کۆتایی و نیوە ئێستا، نیوە لە کاتی گەیشتن لە تورکیا، چین، دوبەی و جیهانەوە بۆ هەولێر و کوردستان." />
+
+  <!-- Alternate Language Titles / Descriptions for Search Engines -->
+  <meta name="keywords"
+    content="Shiply Express, شیپلی ئێکسپرێس, شيبلي اكسبريس, بۆم بکڕە, دیسکەڤەر, کڕینی ئۆنلاین هەولێر, کوردستان, Shop for me Erbil, Discover app Iraq" />
+
+  <!-- Favicons, Apple Touch Icon & PWA Manifest (from Shiply-App-Icon-1024.png) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Social Share (1200x630 Logo on Night #1D1240 background) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shiply Express — شیپلی ئێکسپرێس" />
+  <meta property="og:title" id="og-title"
+    content="شیپلی ئێکسپرێس | تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — Shiply Express" />
+  <meta property="og:description" id="og-description"
+    content="کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە. ئێمە بە یەک نرخی کۆتایی دەیکڕین و دەیگەیەنینە دەستت — نیوە ئێستا، نیوە لە کاتی گەیشتن." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Shiply Express — تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین" />
+  <meta property="og:locale" content="ku_IQ" />
+  <meta property="og:locale:alternate" content="ar_IQ" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twitter-title"
+    content="شیپلی ئێکسپرێس | تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — Shiply Express" />
+  <meta name="twitter:description" id="twitter-description"
+    content="کاڵاکان لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک و وێنەی شاشە بنێرە. نیوە ئێستا، نیوە لە کاتی گەیشتن." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Google Fonts: Vazirmatn (Kurdish/Arabic) & Plus Jakarta Sans (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 </head>
 
-<body class="antialiased selection:bg-purple-500 selection:text-white">
+<body class="bg-paper text-night antialiased selection:bg-violet selection:text-white">
 
-  <!-- Navigation -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 border-b border-transparent">
+  <!-- Loading Screen (Splash with Shiply-Mark-White.svg on Night #1D1240) -->
+  <div id="loading-screen" role="status" aria-label="Loading Shiply Express">
+    <div class="logo-clearspace-lg flex flex-col items-center gap-6">
+      <img src="/SVG/Shiply-Mark-White.svg" alt="Shiply Express Mark" width="84" height="88"
+        class="brand-logo h-20 w-auto" />
+      <div class="flex items-center gap-2.5" aria-hidden="true">
+        <span class="loading-dot" style="animation-delay: 0s;"></span>
+        <span class="loading-dot" style="animation-delay: 0.2s;"></span>
+        <span class="loading-dot" style="animation-delay: 0.4s;"></span>
+      </div>
+      <p class="text-sm font-medium text-paper/80 tracking-wide" data-i18n="loading.tagline">بکڕە · بنێرە · بەدوایدا بچۆ</p>
+    </div>
+  </div>
+  <script>
+    // Dismiss loading screen smoothly as soon as DOM is interactive so LCP is never delayed
+    window.addEventListener('DOMContentLoaded', function () {
+      var loader = document.getElementById('loading-screen');
+      if (loader) {
+        setTimeout(function () {
+          loader.classList.add('loaded');
+        }, 120);
+      }
+    });
+  </script>
+
+  <!-- Header / Navbar -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-24">
-        <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <a href="#" class="flex items-center gap-3 group">
-            <div class="relative">
-              <div
-                class="absolute inset-0 bg-purple-600 blur-md opacity-20 group-hover:opacity-40 transition-opacity rounded-full">
-              </div>
-              <img class="relative h-14 w-auto transition-transform duration-300 group-hover:scale-110"
-                src="/images/logo-purple.png" alt="SHIPLY Logo">
-            </div>
-          </a>
-        </div>
+      <div class="flex items-center justify-between h-20">
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-1" id="desktop-menu">
-          <a href="#home"
-            class="px-5 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-black/10 transition-all"
-            data-i18n="nav.home">HOME</a>
-          <a href="#platform"
-            class="px-5 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-black/10 transition-all"
-            data-i18n="nav.platform">PLATFORM</a>
+        <!-- Navbar Logo: SVG/Shiply-Logo-Compact-Color.svg with clear space -->
+        <a href="#home" class="logo-clearspace flex items-center shrink-0 focus:outline-none"
+          aria-label="Shiply Express Home">
+          <img src="/SVG/Shiply-Logo-Compact-Color.svg" alt="Shiply Express" width="164" height="50"
+            class="brand-logo h-9 sm:h-10 w-auto" />
+        </a>
+
+        <!-- Desktop Main Menu (No weight calculator / per-kilo prices) -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
           <a href="#services"
-            class="px-5 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-black/10 transition-all"
-            data-i18n="nav.services">SERVICES</a>
-          <a href="#about"
-            class="px-5 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-black/10 transition-all"
-            data-i18n="nav.about">ABOUT</a>
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.services">خزمەتگوزارییەکان</a>
+          <a href="#how-it-works"
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.how">چۆن کاردەکات</a>
+          <a href="#payment"
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.payment">پارەدان</a>
+          <a href="#stores"
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.stores">فرۆشگاکان</a>
+          <a href="#download"
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.app">داگرتنی ئەپ</a>
+          <a href="#faq"
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.faq">پرسیارە باوەکان</a>
           <a href="#contact"
-            class="px-5 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-black/10 transition-all"
-            data-i18n="nav.contact">CONTACT</a>
-        </div>
+            class="px-3.5 py-2 rounded-xl text-sm font-semibold text-night hover:text-violet hover:bg-royal/5 transition-colors"
+            data-i18n="nav.contact">پەیوەندی</a>
+        </nav>
 
-        <!-- Right Side: CTA -->
-        <div class="hidden md:flex items-center gap-4">
-          <div class="h-6 w-px bg-black/10 mx-2"></div>
-          <!-- Language Toggle -->
-          <button
-            class="text-gray-600 hover:text-purple-600 font-medium text-sm transition-colors flex items-center gap-1"
-            id="lang-toggle-btn">
-            <i data-lucide="globe" class="w-4 h-4"></i>
-            <span id="current-lang">EN</span>
-          </button>
+        <!-- Desktop Language Switcher & CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <div class="inline-flex items-center bg-white border border-royal/15 rounded-xl p-1" role="group"
+            aria-label="Language Switcher">
+            <button type="button" onclick="setLanguage('ku')" data-lang-btn="ku"
+              class="px-2.5 py-1 rounded-lg text-xs font-bold transition-colors bg-royal text-white">کوردی</button>
+            <button type="button" onclick="setLanguage('ar')" data-lang-btn="ar"
+              class="px-2.5 py-1 rounded-lg text-xs font-bold transition-colors text-night hover:text-violet">العربية</button>
+            <button type="button" onclick="setLanguage('en')" data-lang-btn="en"
+              class="px-2.5 py-1 rounded-lg text-xs font-bold transition-colors text-night hover:text-violet">EN</button>
+          </div>
 
-          <a href="#contact" class="btn-primary flex items-center gap-2" data-i18n="nav.cta">
-            Get Started
-            <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+          <a href="#download" class="btn-primary text-sm !py-2.5 !px-5">
+            <span data-i18n="nav.cta">داگرتنی ئەپ</span>
+            <svg class="w-4 h-4 shrink-0 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </a>
         </div>
 
         <!-- Mobile Controls -->
-        <div class="md:hidden flex items-center gap-1">
-          <!-- Mobile Language Button -->
-          <div class="relative">
-            <button id="mobile-lang-btn"
-              class="text-gray-900 hover:text-purple-600 focus:outline-none p-2 flex items-center gap-1">
-              <i data-lucide="globe" class="w-5 h-5"></i>
-              <span id="mobile-lang-text" class="text-xs font-bold">EN</span>
-            </button>
-            <!-- Dropdown -->
-            <div id="mobile-lang-dropdown"
-              class="absolute top-full end-0 mt-2 w-32 bg-white border border-black/10 rounded-xl shadow-2xl hidden flex-col overflow-hidden z-50">
-              <button onclick="setLanguage('en')"
-                class="px-4 py-3 text-start text-sm text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all w-full">English</button>
-              <button onclick="setLanguage('ar')"
-                class="px-4 py-3 text-start text-sm text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all w-full font-arabic">العربية</button>
-              <button onclick="setLanguage('ku')"
-                class="px-4 py-3 text-start text-sm text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all w-full font-arabic">کوردی</button>
-            </div>
+        <div class="flex lg:hidden items-center gap-2">
+          <div class="inline-flex items-center bg-white border border-royal/15 rounded-xl p-0.5" role="group"
+            aria-label="Mobile Language Switcher">
+            <button type="button" onclick="setLanguage('ku')" data-lang-btn="ku"
+              class="px-2 py-1 rounded-lg text-xs font-bold transition-colors bg-royal text-white">کو</button>
+            <button type="button" onclick="setLanguage('ar')" data-lang-btn="ar"
+              class="px-2 py-1 rounded-lg text-xs font-bold transition-colors text-night">ع</button>
+            <button type="button" onclick="setLanguage('en')" data-lang-btn="en"
+              class="px-2 py-1 rounded-lg text-xs font-bold transition-colors text-night">EN</button>
           </div>
 
-          <button id="mobile-menu-btn" class="text-gray-900 hover:text-purple-600 focus:outline-none p-2">
-            <i data-lucide="menu" class="w-8 h-8"></i>
+          <button type="button" id="mobile-menu-btn"
+            class="p-2.5 rounded-xl bg-white border border-royal/15 text-royal hover:bg-royal/5 focus:outline-none"
+            aria-label="Open Menu" aria-expanded="false">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
           </button>
         </div>
+
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 z-50 bg-night/60 backdrop-blur-xs hidden opacity-0 transition-opacity duration-300"
+    aria-hidden="true"></div>
 
-    <!-- Background Elements -->
-    <div class="absolute inset-0 z-0">
-      <div
-        class="absolute top-0 right-[-10%] w-[50vw] h-[50vw] bg-purple-600/20 rounded-full blur-[120px] animate-pulse">
+  <aside id="mobile-menu"
+    class="fixed top-0 end-0 z-50 w-[85%] max-w-sm h-full bg-paper shadow-2xl transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col"
+    aria-label="Mobile Navigation">
+    <!-- Dark Header inside Mobile Drawer using Shiply-Logo-Compact-White.svg -->
+    <div class="bg-night px-5 py-4 flex items-center justify-between">
+      <div class="logo-clearspace">
+        <img src="/SVG/Shiply-Logo-Compact-White.svg" alt="Shiply Express" width="148" height="45"
+          class="brand-logo h-8 w-auto" />
       </div>
-      <div class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-600/10 rounded-full blur-[120px]">
-      </div>
+      <button type="button" id="mobile-menu-close"
+        class="p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 focus:outline-none" aria-label="Close Menu">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- LEFT: Content -->
-        <div class="flex flex-col items-start text-start pt-10 lg:pt-0">
-          <div class="animate-fade-in-up" style="animation-delay: 0.1s;">
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/5 border border-black/10 backdrop-blur-md mb-8">
-              <span class="relative flex h-2 w-2">
-                <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+    <div class="flex-1 overflow-y-auto p-5 space-y-2">
+      <a href="#home"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.home">سەرەکی</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#services"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.services">خزمەتگوزارییەکان</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#how-it-works"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.how">چۆن کاردەکات</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#payment"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.payment">پارەدان</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#stores"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.stores">فرۆشگاکان</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#download"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.app">داگرتنی ئەپ</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#faq"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.faq">پرسیارە باوەکان</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+      <a href="#contact"
+        class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl font-bold text-royal hover:bg-royal/5 transition-colors">
+        <span data-i18n="nav.contact">پەیوەندی</span>
+        <svg class="w-4 h-4 text-violet rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="p-5 border-t border-royal/10 space-y-3 bg-white">
+      <a href="#download" class="mobile-nav-link btn-primary w-full">
+        <span data-i18n="hero.cta_app">داگرتنی ئەپ</span>
+      </a>
+      <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
+        class="mobile-nav-link btn-secondary w-full">
+        <span data-i18n="hero.cta_message">نامەمان بۆ بنێرە</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Hero Text Column -->
+          <div class="lg:col-span-7 text-start">
+            <!-- Hero Brand Lockup: Kurdish Logo on Kurdish view, switches to Shiply-Logo-Color.svg on EN/AR -->
+            <div class="inline-flex items-center bg-white border border-royal/10 rounded-2xl logo-clearspace-lg mb-6 shadow-xs">
+              <img id="hero-logo" src="/SVG/Shiply-Logo-Kurdish-Color.svg"
+                data-logo-ku="/SVG/Shiply-Logo-Kurdish-Color.svg"
+                data-logo-default="/SVG/Shiply-Logo-Color.svg"
+                alt="Shiply Express — شیپلی ئێکسپرێس" width="184" height="70"
+                class="brand-logo h-12 sm:h-14 w-auto" />
+            </div>
+
+            <!-- Pill Badge -->
+            <div class="mb-4">
+              <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royal/8 border border-royal/15 text-royal text-xs sm:text-sm font-bold">
+                <span class="w-2 h-2 rounded-full bg-violet"></span>
+                <span data-i18n="hero.badge">لە دیسکەڤەری ناو ئەپ هەڵبژێرە یان لینک بنێرە</span>
               </span>
-              <span class="text-xs font-medium text-purple-700 tracking-wide uppercase" data-i18n="hero.badge">Your
-                express bridge to the world</span>
+            </div>
+
+            <!-- Main Headline: تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold heading-royal tracking-tight mb-6"
+              data-i18n="hero.title">
+              «تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین»
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-xl text-night/80 max-w-2xl mb-8 font-medium" data-i18n="hero.subtitle">
+              هەر کاڵایەکت دەوێت لە بەشی دیسکەڤەری ناو ئەپەکەمان هەڵیبژێرە کە نرخی گەیشتنی بۆ هەولێر لەسەرە، یان لینک و وێنەی شاشەکەی بنێرە — ئێمە بە یەک نرخی کۆتایی بۆت دەکڕین و دەیگەیەنینە دەستت.
+            </p>
+
+            <!-- Hero CTA Buttons: Download the app / Message us -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+              <a href="#download" class="btn-primary text-base sm:text-lg">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" x2="12" y1="15" y2="3" />
+                </svg>
+                <span data-i18n="hero.cta_app">داگرتنی ئەپ</span>
+              </a>
+
+              <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
+                class="btn-secondary text-base sm:text-lg">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                </svg>
+                <span data-i18n="hero.cta_message">نامەمان بۆ بنێرە</span>
+              </a>
+            </div>
+
+            <!-- Key Value Pills (No per-kilo pricing!) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-royal/10">
+              <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-royal/10">
+                <span class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center font-bold shrink-0">✓</span>
+                <span class="text-sm font-bold text-royal" data-i18n="hero.pill1">یەک نرخی کۆتایی بۆ هەولێر</span>
+              </div>
+              <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-royal/10">
+                <span class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center font-bold shrink-0">50%</span>
+                <span class="text-sm font-bold text-royal" data-i18n="hero.pill2">نیوە ئێستا، نیوە لە کاتی گەیشتن</span>
+              </div>
+              <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-royal/10">
+                <span class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center font-bold shrink-0">★</span>
+                <span class="text-sm font-bold text-royal" data-i18n="hero.pill3">بەدواداچوونی ڕاستەوخۆ</span>
+              </div>
             </div>
           </div>
 
-          <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] animate-fade-in-up"
-            style="animation-delay: 0.2s;">
-            <span data-i18n="hero.title_start">Shiply Iraq</span> <br>
-            <span class="text-gradient" data-i18n="hero.title_end">Express</span>
-          </h1>
+          <!-- Hero Visual Showcase Column -->
+          <div class="lg:col-span-5">
+            <div class="bg-night rounded-3xl p-5 sm:p-7 text-white shadow-2xl border border-violet/30 relative">
 
-          <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
-            <div class="h-[1.5em] text-2xl sm:text-3xl text-gray-600 font-light flex items-center mb-8">
-              <span class="mr-2" data-i18n="hero.scaling">Shipping from</span>
-              <span id="typing-text" class="text-gray-900 font-semibold"></span>
-              <span class="animate-blink inline-block w-0.5 h-8 bg-purple-500 ml-1"></span>
+              <!-- Top Bar inside Dark Showcase Card -->
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/10">
+                <div class="logo-clearspace">
+                  <img src="/SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="140" height="46"
+                    class="brand-logo h-8 w-auto" />
+                </div>
+                <span class="px-3 py-1 rounded-full bg-lime text-night text-xs font-extrabold"
+                  data-i18n="hero.card_badge">دیسکەڤەر · Discover</span>
+              </div>
+
+              <!-- Discover Product Card Preview (Price to Erbil Shown) -->
+              <div class="bg-white text-night rounded-2xl p-4 sm:p-5 mb-4">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-paper text-royal"
+                    data-i18n="hero.card_store">فرۆشگای جیهانی · دیسکەڤەر</span>
+                  <span class="text-xs font-bold text-violet" data-i18n="hero.card_final_label">نرخی کۆتایی تا هەولێر</span>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 py-2 border-b border-royal/10">
+                  <div>
+                    <h2 class="font-extrabold text-royal text-base sm:text-lg" data-i18n="hero.card_item_title">کاڵای هەڵبژێردراو لە دیسکەڤەر</h2>
+                    <p class="text-xs text-night/70" data-i18n="hero.card_item_sub">کڕین + گەیاندن بۆ هەولێر بەبێ هیچ تێچوویەکی شاراوە</p>
+                  </div>
+                  <div class="text-end shrink-0">
+                    <span class="block text-xl sm:text-2xl font-extrabold text-royal" dir="ltr">$48.00</span>
+                    <span class="text-[11px] font-bold text-violet" data-i18n="hero.card_all_in">نرخی کۆتایی</span>
+                  </div>
+                </div>
+
+                <!-- 50 / 50 Payment Split Preview -->
+                <div class="grid grid-cols-2 gap-2.5 mt-3">
+                  <div class="bg-paper rounded-xl p-2.5 text-start">
+                    <span class="block text-[11px] text-night/70 font-semibold" data-i18n="hero.card_pay_now">نیوە ئێستا (٥٠٪)</span>
+                    <span class="text-sm font-extrabold text-royal" dir="ltr">$24.00</span>
+                  </div>
+                  <div class="bg-paper rounded-xl p-2.5 text-start">
+                    <span class="block text-[11px] text-night/70 font-semibold" data-i18n="hero.card_pay_later">لە کاتی گەیشتن (٥٠٪)</span>
+                    <span class="text-sm font-extrabold text-royal" dir="ltr">$24.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Tracking / WhatsApp Notification Preview (using Shiply-Mark-Color.svg) -->
+              <div class="bg-paper text-night rounded-2xl p-4 flex items-center gap-3.5">
+                <div class="logo-clearspace bg-white rounded-xl border border-royal/10 shrink-0">
+                  <img src="/SVG/Shiply-Mark-Color.svg" alt="Shiply Mark" width="36" height="38"
+                    class="brand-logo h-8 w-auto" />
+                </div>
+                <div class="min-w-0 flex-1 text-start">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-xs font-extrabold text-royal" data-i18n="hero.track_title">گەیشتە هەولێر · SHP-48213</span>
+                    <span class="text-[11px] font-bold text-violet">3 / 4</span>
+                  </div>
+                  <p class="text-xs text-night/80 truncate mt-0.5" data-i18n="hero.track_desc">
+                    سڵاو 👋 بارەکەت گەیشتە هەولێر و ئەمڕۆ دەیگەیەنینە دەستت 📦
+                  </p>
+                  <div class="w-full h-1.5 bg-royal/10 rounded-full mt-2 overflow-hidden">
+                    <div class="w-3/4 h-full bg-violet rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <p class="max-w-xl text-lg text-gray-600 mb-10 leading-relaxed animate-fade-in-up"
-            style="animation-delay: 0.4s;" data-i18n="hero.subtitle">
-            Experience the future of shipping with our AI-powered logistics platform. Reliable, fast, and completely
-            transparent from pickup to delivery.
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SERVICES SECTION -->
+    <section id="services" class="py-16 sm:py-24 bg-white border-y border-royal/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+            data-i18n="services.badge">خزمەتگوزارییەکانمان</span>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="services.title">
+            چوار ڕێگەی ئاسان بۆ کڕین لە هەموو جیهانەوە
+          </h2>
+          <p class="text-base sm:text-lg text-night/75" data-i18n="services.subtitle">
+            پێویستت بە کارتی بانکی یان هەژمارکردنی کێش نییە — تەنها کاڵاکەت هەڵبژێرە و ئێمە هەموو کارەکە دەکەین.
           </p>
+        </div>
 
-          <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.5s;">
-            <a href="#contact" class="btn-primary flex items-center gap-2 text-lg">
-              <span data-i18n="hero.cta_primary">Start Shipping</span>
-              <i data-lucide="arrow-right" class="w-5 h-5 rtl:rotate-180"></i>
-            </a>
-            <a href="#platform" class="btn-secondary flex items-center gap-2 text-lg" data-i18n="hero.cta_secondary">
-              <i data-lucide="download" class="w-5 h-5"></i>
-              Download App
-            </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Service 1: بۆم بکڕە Shop for me (send a link) -->
+          <article class="brand-card bg-paper/60 flex flex-col justify-between text-start">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-royal text-lime flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg>
+              </div>
+              <span class="inline-block text-xs font-bold text-violet bg-violet/10 px-3 py-1 rounded-lg mb-3"
+                data-i18n="services.s1.tag">لینکەکەی بنێرە · Send a link</span>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-2" data-i18n="services.s1.title">
+                بۆم بکڕە · Shop for me
+              </h3>
+              <p class="text-sm sm:text-base text-night/80" data-i18n="services.s1.desc">
+                لینکی هەر کاڵایەک لە هەر ماڵپەڕ و فرۆشگایەکی جیهانی کۆپی بکە و لە ئەپەکە یان واتسئەپ بۆمانی بنێرە؛ ئێمە بۆت دەکڕین و دەیگەیەنین.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10">
+              <a href="#contact" class="brand-link text-sm inline-flex items-center gap-1.5">
+                <span data-i18n="services.s1.cta">لینک بنێرە</span>
+                <svg class="w-4 h-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2: دیسکەڤەر Discover (price to Erbil shown) -->
+          <article class="brand-card bg-paper/60 flex flex-col justify-between text-start border-2 border-violet/30">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-night text-lime flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              </div>
+              <span class="inline-block text-xs font-bold text-royal bg-royal/10 px-3 py-1 rounded-lg mb-3"
+                data-i18n="services.s2.tag">نرخی گەیشتن بۆ هەولێر دیاریکراوە</span>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-2" data-i18n="services.s2.title">
+                دیسکەڤەر · Discover
+              </h3>
+              <p class="text-sm sm:text-base text-night/80" data-i18n="services.s2.desc">
+                لەناو ئەپی شیپلی سەدان کاڵای هەڵبژێردراو ببینە کە نرخی کۆتایی گەیشتنیان بۆ هەولێر لەسەر نووسراوە و بە یەک کلیک داوای بکە.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10">
+              <a href="#download" class="brand-link text-sm inline-flex items-center gap-1.5">
+                <span data-i18n="services.s2.cta">لە ئەپەکەدا بیبینە</span>
+                <svg class="w-4 h-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 3: بۆم بدۆزەرەوە Find it for me (send a screenshot) -->
+          <article class="brand-card bg-paper/60 flex flex-col justify-between text-start">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-royal text-lime flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </svg>
+              </div>
+              <span class="inline-block text-xs font-bold text-violet bg-violet/10 px-3 py-1 rounded-lg mb-3"
+                data-i18n="services.s3.tag">وێنەی شاشە بنێرە · Send a screenshot</span>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-2" data-i18n="services.s3.title">
+                بۆم بدۆزەرەوە · Find it for me
+              </h3>
+              <p class="text-sm sm:text-base text-night/80" data-i18n="services.s3.desc">
+                شتێکت لە ئینستاگرام یان تیکتۆک بینیوە و نازانیت لەکوێ دەفرۆشرێت؟ تەنها وێنەی شاشەکەی (سکرینشۆت) بنێرە، تیمەکەمان بۆت دەدۆزێتەوە و دەیکڕێت.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10">
+              <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
+                class="brand-link text-sm inline-flex items-center gap-1.5">
+                <span data-i18n="services.s3.cta">وێنە بنێرە</span>
+                <svg class="w-4 h-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 4: دیاری بنێرە Send a gift -->
+          <article class="brand-card bg-paper/60 flex flex-col justify-between text-start">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-royal text-lime flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="8" width="18" height="4" rx="1" />
+                  <path d="M12 8v13" />
+                  <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" />
+                </svg>
+              </div>
+              <span class="inline-block text-xs font-bold text-violet bg-violet/10 px-3 py-1 rounded-lg mb-3"
+                data-i18n="services.s4.tag">دیاری بۆ ئازیزانت · Gift delivery</span>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-2" data-i18n="services.s4.title">
+                دیاری بنێرە · Send a gift
+              </h3>
+              <p class="text-sm sm:text-base text-night/80" data-i18n="services.s4.desc">
+                جوانترین دیاری لە فرۆشگا جیهانییەکانەوە هەڵبژێرە؛ ئێمە دەیکڕین، بە جوانی دەیپێچینەوە و ڕاستەوخۆ دەیگەیەنینە دەستی ئازیزانت.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10">
+              <a href="#download" class="brand-link text-sm inline-flex items-center gap-1.5">
+                <span data-i18n="services.s4.cta">دیاری هەڵبژێرە</span>
+                <svg class="w-4 h-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-16 sm:py-24 bg-paper">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+            data-i18n="how.badge">چۆن کاردەکات</span>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="how.title">
+            لە هەڵبژاردنەوە تا بەردەم دەرگای ماڵەوەت بە ٣ هەنگاو
+          </h2>
+          <p class="text-base sm:text-lg text-night/75" data-i18n="how.subtitle">
+            هەڵبژێرە ← ئێمە بە یەک نرخی کۆتایی دەیکڕین ← لەگەڵ بەدواداچوونی ڕاستەوخۆ وەریدەگریت
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 relative">
+          <!-- Step 1: Choose -->
+          <div class="brand-card relative text-start flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">1</span>
+                <svg class="w-6 h-6 text-violet hidden lg:block rtl:rotate-180" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-3" data-i18n="how.step1.title">
+                ١. کاڵاکەت هەڵبژێرە
+              </h3>
+              <p class="text-night/80 text-sm sm:text-base" data-i18n="how.step1.desc">
+                لە بەشی دیسکەڤەری ناو ئەپ کاڵاکەت هەڵبژێرە، یان لینکی کاڵاکە و وێنەی شاشەکەی (سکرینشۆت) بنێرە بۆ تیمەکەمان.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10 text-xs font-bold text-violet" data-i18n="how.step1.foot">
+              دیسکەڤەر · لینک · وێنەی شاشە
+            </div>
           </div>
 
-          <!-- Trust Indicators -->
-          <div class="mt-12 pt-8 border-t border-black/10 w-full animate-fade-in-up" style="animation-delay: 0.6s;">
-            <div class="grid grid-cols-3 gap-8">
-              <div>
-                <div class="text-2xl font-bold text-gray-900">10k+</div>
-                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1" data-i18n="stats.deliveries">Shipments
-                </div>
+          <!-- Step 2: We buy it at one final price -->
+          <div class="brand-card relative text-start flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">2</span>
+                <svg class="w-6 h-6 text-violet hidden lg:block rtl:rotate-180" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </div>
-              <div>
-                <div class="text-2xl font-bold text-gray-900">99%</div>
-                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1" data-i18n="stats.clients">Success Rate
-                </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-3" data-i18n="how.step2.title">
+                ٢. ئێمە دەیکڕین بە یەک نرخی کۆتایی
+              </h3>
+              <p class="text-night/80 text-sm sm:text-base" data-i18n="how.step2.desc">
+                پێش کڕین یەک نرخی کۆتایی و ڕوونت پێ دەدرێت تا دەگاتە هەولێر. بەبێ سەرئێشەی کێش و بەبێ هیچ تێچوویەکی زیادە لە کاتی گەیشتن.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10 text-xs font-bold text-violet" data-i18n="how.step2.foot">
+              یەک نرخی ڕوون و جێگیر
+            </div>
+          </div>
+
+          <!-- Step 3: You receive it with live tracking -->
+          <div class="brand-card relative text-start flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-lime text-night font-extrabold text-xl flex items-center justify-center">3</span>
+                <span class="px-3 py-1 rounded-lg bg-royal/10 text-royal text-xs font-bold" data-i18n="how.step3.badge">LIVE</span>
               </div>
-              <div>
-                <div class="text-2xl font-bold text-gray-900">24/7</div>
-                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1" data-i18n="stats.support">Support</div>
-              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold heading-royal mb-3" data-i18n="how.step3.title">
+                ٣. لەگەڵ بەدواداچوونی ڕاستەوخۆ وەریبگرە
+              </h3>
+              <p class="text-night/80 text-sm sm:text-base" data-i18n="how.step3.desc">
+                لە ساتی کڕینەوە تا گەیشتنی بۆ هەولێر و بەردەم دەرگای ماڵەوەت، لەناو ئەپ و واتسئەپ هەنگاو بە هەنگاو ئاگاداری بارەکەت دەبیت.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-royal/10 text-xs font-bold text-violet" data-i18n="how.step3.foot">
+              ئاگادارکردنەوەی دەستبەجێ لە ئەپ و واتسئەپ
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- RIGHT: 3D Composition -->
-        <div class="relative block h-[400px] lg:h-[600px] mt-12 lg:mt-0 w-full animate-fade-in-up perspective-1000"
-          style="animation-delay: 0.4s;">
-          <!-- Scaled Wrapper for Mobile -->
-          <div
-            class="relative w-full h-full flex items-center justify-center transform scale-[0.6] sm:scale-75 md:scale-90 lg:scale-100 origin-center">
-            <!-- Decorative Orbit Rings -->
-            <div
-              class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-white/5 rounded-full z-0">
-            </div>
-            <div
-              class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-black/10 rounded-full z-0">
+    <!-- 4. PAYMENT SECTION: «نیوە ئێستا، نیوە لە کاتی گەیشتن» -->
+    <section id="payment" class="py-16 sm:py-24 bg-night text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+          <div class="lg:col-span-7 text-start">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-lime/30 text-lime text-xs sm:text-sm font-bold mb-5">
+              <span class="w-2 h-2 rounded-full bg-lime"></span>
+              <span data-i18n="payment.badge">شێوازی پارەدانی ئاسان و جێی متمانە</span>
             </div>
 
-            <!-- Main Glass Card -->
-            <div
-              class="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 glass rounded-3xl p-6 z-20 animate-float">
-              <div class="flex justify-between items-center mb-6">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-gray-900 shadow-lg shadow-purple-500/30">
-                    <i data-lucide="box" class="w-5 h-5"></i>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-5" data-i18n="payment.title">
+              «نیوە ئێستا، نیوە لە کاتی گەیشتن»
+            </h2>
+
+            <p class="text-base sm:text-xl text-paper/85 max-w-2xl mb-8" data-i18n="payment.subtitle">
+              پێویست ناکات تەواوی پارەکە لە سەرەتاوە بدەیت. تەنها نیوەی نرخەکە لە کاتی جێگیرکردنی داواکارییەکەت بدە، و نیوەکەی تر کاتێک کاڵاکەت دەگاتە دەستت.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+              <a href="#download" class="btn-primary">
+                <span data-i18n="payment.cta">ئێستا لە ئەپەکە داوا بکە</span>
+                <svg class="w-5 h-5 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- 50% Now Card -->
+              <div class="brand-card-dark text-start">
+                <span class="inline-block px-3 py-1 rounded-lg bg-lime text-night text-xs font-extrabold mb-4">50%</span>
+                <h3 class="text-xl font-extrabold text-white mb-2" data-i18n="payment.half1_title">نیوە ئێستا</h3>
+                <p class="text-sm text-paper/80" data-i18n="payment.half1_desc">
+                  لە کاتی پەسەندکردنی داواکارییەکەت دەیدەیت بۆ ئەوەی دەستبەجێ کاڵاکەت بۆ بکڕین.
+                </p>
+              </div>
+
+              <!-- 50% On Delivery Card -->
+              <div class="brand-card-dark text-start">
+                <span class="inline-block px-3 py-1 rounded-lg bg-violet text-white text-xs font-extrabold mb-4">50%</span>
+                <h3 class="text-xl font-extrabold text-white mb-2" data-i18n="payment.half2_title">نیوە لە کاتی گەیشتن</h3>
+                <p class="text-sm text-paper/80" data-i18n="payment.half2_desc">
+                  کاتێک بارەکەت دەگاتە هەولێر و ڕادەستی تۆ دەکرێت، نیوەکەی تر دەدەیت.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kurdish White Logo Lockup inside Night section -->
+            <div class="mt-4 bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between">
+              <div class="logo-clearspace">
+                <img src="/SVG/Shiply-Logo-Kurdish-White.svg" alt="شیپلی ئێکسپرێس" width="130" height="49"
+                  class="brand-logo h-9 w-auto" />
+              </div>
+              <span class="text-xs font-bold text-lime" data-i18n="payment.guarantee">١٠٠٪ گەرەنتی گەیشتن</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. STORES WORLDWIDE SECTION -->
+    <section id="stores" class="py-16 sm:py-24 bg-white border-b border-royal/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+            data-i18n="stores.badge">فرۆشگا جیهانییەکان</span>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="stores.title">
+            ئێمە لە فرۆشگاکانی تورکیا، چین، دوبەی و هەموو جیهانەوە دەکڕین
+          </h2>
+          <p class="text-base sm:text-lg text-night/75" data-i18n="stores.subtitle">
+            لە هەر فرۆشگایەکی ئۆنلاین کاڵاکەت هەڵبژێرە — ئێمە دەیکڕین و بە خێرایی دەیهێنینەوە بۆ کوردستان و عێراق.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Turkey -->
+          <div class="brand-card bg-paper/50 text-start">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">TR</span>
+              <span class="text-xs font-bold text-violet" data-i18n="stores.turkey.tag">گەیاندنی خێرا</span>
+            </div>
+            <h3 class="text-xl font-extrabold heading-royal mb-2" data-i18n="stores.turkey.title">تورکیا · Turkey</h3>
+            <p class="text-sm text-night/75 mb-4" data-i18n="stores.turkey.desc">
+              جلوبەرگ، پێڵاو، جوانکاری و پێداویستی ناوماڵ لە بەناوبانگترین براندەکانی تورکیا.
+            </p>
+            <div class="flex flex-wrap gap-1.5" dir="ltr">
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Trendyol</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Zara TR</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">LC Waikiki</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Hepsiburada</span>
+            </div>
+          </div>
+
+          <!-- China -->
+          <div class="brand-card bg-paper/50 text-start">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">CN</span>
+              <span class="text-xs font-bold text-violet" data-i18n="stores.china.tag">هەزاران کاڵا</span>
+            </div>
+            <h3 class="text-xl font-extrabold heading-royal mb-2" data-i18n="stores.china.title">چین · China</h3>
+            <p class="text-sm text-night/75 mb-4" data-i18n="stores.china.desc">
+              ئەلیکترۆنیات، مۆدە، پێداویستی ڕۆژانە و کاڵای تایبەت ڕاستەوخۆ لە گەورەترین فرۆشگاکانی چینەوە.
+            </p>
+            <div class="flex flex-wrap gap-1.5" dir="ltr">
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">SHEIN</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Taobao</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Alibaba</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">AliExpress</span>
+            </div>
+          </div>
+
+          <!-- Dubai -->
+          <div class="brand-card bg-paper/50 text-start">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">AE</span>
+              <span class="text-xs font-bold text-violet" data-i18n="stores.dubai.tag">براندە ڕەسەنەکان</span>
+            </div>
+            <h3 class="text-xl font-extrabold heading-royal mb-2" data-i18n="stores.dubai.title">دوبەی · Dubai</h3>
+            <p class="text-sm text-night/75 mb-4" data-i18n="stores.dubai.desc">
+              براندە جیهانییەکان، بۆن، کاتژمێر، مۆبایل و ئامێرە زیرەکەکان لە فرۆشگاکانی دوبەی و ئیماراتەوە.
+            </p>
+            <div class="flex flex-wrap gap-1.5" dir="ltr">
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Amazon.ae</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Noon</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Namshi</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Sephora</span>
+            </div>
+          </div>
+
+          <!-- Worldwide -->
+          <div class="brand-card bg-paper/50 text-start">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold px-3 py-1 rounded-lg bg-royal text-white">GLOBAL</span>
+              <span class="text-xs font-bold text-violet" data-i18n="stores.world.tag">ئەمریکا و ئەوروپا</span>
+            </div>
+            <h3 class="text-xl font-extrabold heading-royal mb-2" data-i18n="stores.world.title">هەموو جیهان · Worldwide</h3>
+            <p class="text-sm text-night/75 mb-4" data-i18n="stores.world.desc">
+              هەر ماڵپەڕێکی ئەمریکی، بەریتانی یان ئەوروپی هەڵبژێرە — تەنها لینکەکەی بنێرە و ئێمە بۆت دەکڕین.
+            </p>
+            <div class="flex flex-wrap gap-1.5" dir="ltr">
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Amazon US</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Apple</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">Nike</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white border border-royal/10 text-xs font-bold text-royal">ASOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. APP DOWNLOAD SECTION -->
+    <section id="download" class="py-16 sm:py-24 bg-paper">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-night rounded-3xl p-6 sm:p-10 lg:p-14 text-white shadow-2xl overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <!-- Left / Start Content -->
+            <div class="lg:col-span-7 text-start">
+              <div class="logo-clearspace inline-block bg-white/5 rounded-2xl border border-white/10 mb-6">
+                <img src="/SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="156" height="52"
+                  class="brand-logo h-10 w-auto" />
+              </div>
+
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4" data-i18n="app.title">
+                ئەپی شیپلی دابەزێنە و لە دیسکەڤەرەوە دەست پێ بکە
+              </h2>
+
+              <p class="text-base sm:text-lg text-paper/80 mb-8 max-w-xl" data-i18n="app.subtitle">
+                هەموو خزمەتگوزارییەکانی «بۆم بکڕە»، «دیسکەڤەر»، «بۆم بدۆزەرەوە» و «دیاری بنێرە» لەگەڵ بەدواداچوونی ڕاستەوخۆ لەناو مۆبایلەکەتدایە.
+              </p>
+
+              <ul class="space-y-3 mb-8 text-sm sm:text-base text-paper/90">
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-lime text-night font-extrabold text-xs flex items-center justify-center shrink-0">✓</span>
+                  <span data-i18n="app.feat1">دیسکەڤەر: بینینی نرخی کۆتایی کاڵاکان تا دەگاتە هەولێر</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-lime text-night font-extrabold text-xs flex items-center justify-center shrink-0">✓</span>
+                  <span data-i18n="app.feat2">ناردنی لینک یان وێنەی شاشە بە چەند چرکەیەک</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-lime text-night font-extrabold text-xs flex items-center justify-center shrink-0">✓</span>
+                  <span data-i18n="app.feat3">ئاگادارکردنەوەی ڕاستەوخۆ لە هەموو قۆناغەکانی کڕین و گەیاندن</span>
+                </li>
+              </ul>
+
+              <!-- Store Buttons -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <!-- App Store Live Link -->
+                <a href="https://apps.apple.com/iq/app/shiply-express/id6756037985" target="_blank"
+                  rel="noopener noreferrer" class="btn-primary">
+                  <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3" />
+                  </svg>
+                  <div class="text-start">
+                    <span class="block text-[10px] font-bold uppercase tracking-wider opacity-80"
+                      data-i18n="app.ios_sub">دابەزاندن لە</span>
+                    <span class="block text-base font-extrabold leading-none">App Store</span>
+                  </div>
+                </a>
+
+                <!-- Google Play (Coming Soon as requested) -->
+                <div role="button" aria-disabled="true"
+                  class="btn-ghost-dark opacity-85 cursor-not-allowed select-none"
+                  title="Coming Soon on Google Play">
+                  <svg class="w-5 h-5 shrink-0 text-lime" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5.31 0 .61.1.86.28l14.18 8.5c.71.43.94 1.35.51 2.06-.13.21-.3.38-.51.51l-14.18 8.5c-.71.43-1.63.2-2.06-.51-.18-.25-.28-.55-.3-.84z" />
+                  </svg>
+                  <div class="text-start">
+                    <span class="block text-[10px] font-bold text-lime uppercase tracking-wider"
+                      data-i18n="app.android_soon">بەم زووانە · Coming Soon</span>
+                    <span class="block text-base font-extrabold leading-none">Google Play</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right / End App Preview WebP Images -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="grid grid-cols-2 gap-4 max-w-sm w-full">
+                <div class="bg-paper rounded-2xl p-2 shadow-lg border border-white/15">
+                  <img src="/images/platform/app1.webp" alt="Shiply Express App Home Screen" width="270" height="585"
+                    loading="lazy" decoding="async" class="w-full h-auto rounded-xl object-cover" />
+                </div>
+                <div class="bg-paper rounded-2xl p-2 shadow-lg border border-white/15 mt-6">
+                  <img src="/images/platform/app3.webp" alt="Shiply Express App Tracking Screen" width="270" height="585"
+                    loading="lazy" decoding="async" class="w-full h-auto rounded-xl object-cover" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ SECTION -->
+    <section id="faq" class="py-16 sm:py-24 bg-white border-t border-royal/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-paper border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+            data-i18n="faq.badge">پرسیارە باوەکان</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold heading-royal mb-4" data-i18n="faq.title">
+            وەڵامی هەموو پرسیارەکانت
+          </h2>
+          <p class="text-base sm:text-lg text-night/75" data-i18n="faq.subtitle">
+            هەموو ئەوەی پێویستە بیزانیت دەربارەی کڕین و گەیاندن لەگەڵ شیپلی ئێکسپرێس.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden" open>
+            <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
+              <span data-i18n="faq.q1">چۆن دەتوانم لە ڕێگەی شیپلی ئێکسپرێسەوە داواکاری بکەم؟</span>
+              <svg class="faq-chevron w-5 h-5 text-violet shrink-0 transition-transform duration-200" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-night/80 text-start border-t border-royal/10 pt-4"
+              data-i18n="faq.a1">
+              زۆر ئاسانە! دەتوانیت ڕاستەوخۆ لە بەشی «دیسکەڤەر» لەناو ئەپەکەمان کاڵاکەت هەڵبژێریت، یان لە بەشی «بۆم بکڕە» لینکی کاڵاکە بنێریت، یان لە بەشی «بۆم بدۆزەرەوە» تەنها وێنەی شاشە (سکرینشۆت)ی کاڵاکە بنێریت و ئێمە بۆت دەکڕین.
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
+              <span data-i18n="faq.q2">چۆن نرخی کۆتایی کاڵاکەم دەزانم؟</span>
+              <svg class="faq-chevron w-5 h-5 text-violet shrink-0 transition-transform duration-200" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-night/80 text-start border-t border-royal/10 pt-4"
+              data-i18n="faq.a2">
+              لە بەشی دیسکەڤەری ناو ئەپ، نرخی کۆتایی گەیشتن بۆ هەولێر لەسەر هەموو کاڵایەک نووسراوە. بۆ لینک و سکرینشۆتیش، پێش کڕین یەک نرخی کۆتایی و تەواوت پێ دەڵێین بەبێ هیچ تێچوویەکی شاراوە.
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
+              <span data-i18n="faq.q3">شێوازی پارەدانی «نیوە ئێستا، نیوە لە کاتی گەیشتن» چۆنە؟</span>
+              <svg class="faq-chevron w-5 h-5 text-violet shrink-0 transition-transform duration-200" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-night/80 text-start border-t border-royal/10 pt-4"
+              data-i18n="faq.a3">
+              کاتێک داواکارییەکەت پەسەند دەکەیت تەنها ٥٠٪ی نرخەکە دەدەیت، و ٥٠٪ەکەی تر دەمێنێتەوە بۆ کاتی گەیشتنی کاڵاکەت بۆ هەولێر و وەرگرتنی لە دەستی خۆتدا.
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item brand-card bg-paper/40 !p-0 overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer font-extrabold text-royal text-base sm:text-lg text-start">
+              <span data-i18n="faq.q4">لە کام وڵات و فرۆشگایانەوە کاڵا دەکڕن؟</span>
+              <svg class="faq-chevron w-5 h-5 text-violet shrink-0 transition-transform duration-200" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-night/80 text-start border-t border-royal/10 pt-4"
+              data-i18n="faq.a4">
+              ئێمە لە فرۆشگاکانی تورکیا، چین، دوبەی (ئیمارات)، ئەمریکا، بەریتانیا، ئەوروپا و هەموو ماڵپەڕە جیهانییەکانەوە کاڵا دەکڕین و دەیهێنینەوە.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION (WhatsApp, Instagram, Direct Message Form) -->
+    <section id="contact" class="py-16 sm:py-24 bg-paper border-t border-royal/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+          <!-- Contact Channels -->
+          <div class="lg:col-span-6 text-start">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-white border border-royal/15 text-violet text-xs sm:text-sm font-bold mb-3"
+              data-i18n="contact.badge">پەیوەندیمان پێوە بکە</span>
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold heading-royal mb-4" data-i18n="contact.title">
+              لە واتسئەپ و ئینستاگرام لەگەڵتانین
+            </h2>
+            <p class="text-base sm:text-lg text-night/75 mb-8" data-i18n="contact.subtitle">
+              لینک یان وێنەی کاڵاکەت بنێرە یان هەر پرسیارێکت هەیە ڕاستەوخۆ نامەمان بۆ بنێرە، تیمەکەمان بە خێرایی وەڵامت دەداتەوە.
+            </p>
+
+            <div class="space-y-4">
+              <!-- WhatsApp Direct Card -->
+              <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
+                class="brand-card flex items-center justify-between gap-4 !p-5">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-lime text-night flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                    </svg>
                   </div>
                   <div>
-                    <div class="text-sm font-bold text-gray-900">Shipment #8821</div>
-                    <div class="text-xs text-purple-600">In Transit • Dubai</div>
+                    <div class="text-xs font-bold text-violet uppercase" data-i18n="contact.whatsapp_label">واتسئەپ · WhatsApp</div>
+                    <div class="text-lg font-extrabold text-royal" dir="ltr">+964 750 949 0950</div>
                   </div>
                 </div>
-                <div
-                  class="px-2 py-1 rounded-full bg-green-500/20 text-green-400 text-[10px] font-bold border border-green-500/20">
-                  LIVE</div>
-              </div>
-
-              <!-- Map Viz Styles -->
-              <div class="h-32 w-full bg-white/20 rounded-xl mb-4 relative overflow-hidden border border-white/5">
-                <div class="absolute inset-0 opacity-30"
-                  style="background-image: radial-gradient(#8b5cf6 1px, transparent 1px); background-size: 10px 10px;">
-                </div>
-                <!-- Route Line -->
-                <svg class="absolute inset-0 w-full h-full rtl:-scale-x-100">
-                  <path d="M 20,80 Q 90,20 180,50 T 300,40" fill="none" stroke="url(#gradient-line)" stroke-width="3"
-                    stroke-linecap="round" stroke-dasharray="5,5" />
-                  <defs>
-                    <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#d946ef;stop-opacity:1" />
-                    </linearGradient>
-                  </defs>
+                <svg class="w-5 h-5 text-violet rtl:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
                 </svg>
-                <!-- Moving Dot -->
-                <div
-                  class="absolute top-[40px] start-[200px] w-3 h-3 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-pulse">
-                </div>
-              </div>
+              </a>
 
+              <!-- Instagram Direct Card -->
+              <a href="https://www.instagram.com/shiply.iraq/" target="_blank" rel="noopener noreferrer"
+                class="brand-card flex items-center justify-between gap-4 !p-5">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-violet text-white flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-violet uppercase" data-i18n="contact.instagram_label">ئینستاگرام · Instagram</div>
+                    <div class="text-lg font-extrabold text-royal" dir="ltr">@shiply.iraq</div>
+                  </div>
+                </div>
+                <svg class="w-5 h-5 text-violet rtl:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
 
-              <div class="flex justify-between text-sm">
-                <div class="text-gray-600">Est. Delivery</div>
-                <div class="text-gray-900 font-mono">2 Days</div>
-              </div>
-            </div>
-
-            <!-- Floating Stats Card 1 -->
-            <div class="absolute top-[10%] end-[10%] glass p-4 rounded-2xl z-20 animate-float"
-              style="animation-delay: 1.5s;">
-              <div class="flex items-center gap-3">
-                <div class="p-2 bg-blue-500/20 rounded-lg text-blue-400">
-                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+              <!-- Address Card -->
+              <a href="https://maps.google.com/?q=E1+Tower,+60m+Street,+Erbil,+Iraq" target="_blank"
+                rel="noopener noreferrer" class="brand-card flex items-center justify-between gap-4 !p-5">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-royal text-white flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-violet uppercase" data-i18n="contact.address_label">ناونیشان · Location</div>
+                    <div class="text-base sm:text-lg font-extrabold text-royal" data-i18n="contact.address_val">هەولێر، شەقامی ٦٠ مەتری، تاوەری E1</div>
+                  </div>
                 </div>
-                <div>
-                  <div class="text-xs text-gray-600">Status</div>
-                  <div class="text-sm font-bold text-gray-900">Insured</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Floating Stats Card 2 -->
-            <div class="absolute bottom-[20%] start-[0%] glass p-4 rounded-2xl z-20 animate-float"
-              style="animation-delay: 2.5s;">
-              <div class="flex items-center gap-3">
-                <div class="p-2 bg-orange-500/20 rounded-lg text-orange-400">
-                  <i data-lucide="globe" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-gray-600">Global</div>
-                  <div class="text-sm font-bold text-gray-900">150+ Cities</div>
-                </div>
-              </div>
+                <svg class="w-5 h-5 text-violet rtl:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
+
+          <!-- Quick WhatsApp Order / Message Form -->
+          <div class="lg:col-span-6">
+            <div class="brand-card !p-6 sm:!p-8 text-start">
+              <div class="flex items-center justify-between gap-3 mb-6">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold heading-royal" data-i18n="form.title">
+                    داواکاری یان نامە بنێرە
+                  </h3>
+                  <p class="text-xs sm:text-sm text-night/70 mt-1" data-i18n="form.subtitle">
+                    ڕاستەوخۆ دەچێت بۆ واتسئەپی شیپلی ئێکسپرێس
+                  </p>
+                </div>
+                <div class="logo-clearspace bg-paper rounded-xl">
+                  <img src="/SVG/Shiply-Mark-Color.svg" alt="Shiply Mark" width="32" height="34"
+                    class="brand-logo h-7 w-auto" />
+                </div>
+              </div>
+
+              <form id="whatsapp-form" class="space-y-4">
+                <div>
+                  <label for="form-name" class="block text-sm font-bold text-royal mb-1.5" data-i18n="form.name">ناوی تەواو</label>
+                  <input type="text" id="form-name" class="brand-input" required />
+                </div>
+
+                <div>
+                  <label for="form-phone" class="block text-sm font-bold text-royal mb-1.5" data-i18n="form.phone">ژمارەی مۆبایل</label>
+                  <input type="tel" id="form-phone" class="brand-input" dir="ltr" required />
+                </div>
+
+                <div>
+                  <label for="form-service" class="block text-sm font-bold text-royal mb-1.5" data-i18n="form.service">جۆری خزمەتگوزاری</label>
+                  <select id="form-service" class="brand-input">
+                    <option value="Shop for me (بۆم بکڕە)" data-i18n="form.opt_shop">بۆم بکڕە (ناردنی لینک)</option>
+                    <option value="Discover (دیسکەڤەر)" data-i18n="form.opt_discover">دیسکەڤەر (ناو ئەپ)</option>
+                    <option value="Find it for me (بۆم بدۆزەرەوە)" data-i18n="form.opt_find">بۆم بدۆزەرەوە (وێنەی شاشە)</option>
+                    <option value="Send a gift (دیاری بنێرە)" data-i18n="form.opt_gift">دیاری بنێرە</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="form-link" class="block text-sm font-bold text-royal mb-1.5" data-i18n="form.link">لینکی کاڵا یان تێبینی</label>
+                  <input type="text" id="form-link" class="brand-input" required />
+                </div>
+
+                <button type="submit" class="btn-primary w-full mt-2">
+                  <span data-i18n="form.submit">ناردن لە ڕێگەی واتسئەپ</span>
+                  <svg class="w-5 h-5 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Services Section -->
-  <section id="services" class="py-24 relative">
+  <!-- FOOTER (Night #1D1240 background, White & Kurdish-White SVG Logos) -->
+  <footer class="bg-night text-white pt-16 pb-10 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-sm font-bold text-purple-600 uppercase tracking-wider mb-3" data-i18n="services.label">Our
-          Solutions</h2>
-        <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="services.title">Comprehensive Logistics</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-i18n="services.subtitle">
-          Premium shipping solutions tailored to your specific business requirements.
-        </p>
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="plane" class="w-7 h-7"></i>
+        <!-- Brand Column -->
+        <div class="md:col-span-5 text-start">
+          <div class="inline-flex flex-wrap items-center gap-4 mb-4">
+            <div class="logo-clearspace bg-white/5 rounded-2xl border border-white/10">
+              <img id="footer-logo" src="/SVG/Shiply-Logo-Kurdish-White.svg"
+                data-logo-ku="/SVG/Shiply-Logo-Kurdish-White.svg"
+                data-logo-default="/SVG/Shiply-Logo-White.svg"
+                alt="Shiply Express Logo" width="148" height="56"
+                class="brand-logo h-10 w-auto" />
+            </div>
+            <div class="logo-clearspace">
+              <img src="/SVG/Shiply-Logo-White.svg" alt="Shiply Express" width="136" height="45"
+                class="brand-logo h-8 w-auto" />
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.air.title">Air Freight</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.air.desc">
-            Rapid global delivery for your most critical time-sensitive shipments.
+          <p class="text-paper/80 text-sm sm:text-base max-w-sm mb-6" data-i18n="footer.tagline">
+            تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — لە فرۆشگاکانی تورکیا، چین، دوبەی و هەموو جیهانەوە بۆ بەردەم دەرگای ماڵەوەت.
+          </p>
+          <p class="text-xs font-bold text-lime" data-i18n="footer.payment_note">
+            «نیوە ئێستا، نیوە لە کاتی گەیشتن»
           </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="ship" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.ocean.title">Ocean Shipping</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.ocean.desc">
-            Efficient, large-scale transport solutions across major global trade routes.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="truck" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.land.title">Land Transport</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.land.desc">
-            Secure and reliable ground fleet network for door-to-door interconnectivity.
-          </p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="package" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.storage.title">Smart Warehousing</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.storage.desc">
-            Climate-controlled storage with real-time digital inventory management.
-          </p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="shopping-bag" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.ecom.title">E-Commerce</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.ecom.desc">
-            End-to-end fulfillment solutions designed to scale your online business.
-          </p>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="luxury-card group">
-          <div class="icon-box w-14 h-14 mb-6">
-            <i data-lucide="file-check" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="services.customs.title">Customs Brokerage</h3>
-          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="services.customs.desc">
-            Expert handling of documentation and clearance for hassle-free entry.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Platform Section -->
-  <section id="platform" class="py-24 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent">
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <!-- LEFT: Text -->
-        <div class="text-start">
-          <h2 class="text-sm font-bold text-purple-600 uppercase tracking-wider mb-3" data-i18n="platform.label">THE APP
-          </h2>
-          <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900" data-i18n="platform.title">Power in Your Pocket
-          </h2>
-          <p class="text-gray-600 text-lg mb-8 leading-relaxed" data-i18n="platform.desc">
-            Manage your entire supply chain from your mobile device. Get push notifications, track shipments in
-            real-time, and handle documentation instantly.
-          </p>
-
-          <ul class="space-y-6">
-            <li class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-600 mt-1">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-gray-900 font-bold text-lg" data-i18n="platform.feat1.title">Real-Time Tracking</h4>
-                <p class="text-gray-500 text-sm" data-i18n="platform.feat1.desc">Live GPS updates for total visibility.
-                </p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-600 mt-1">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-gray-900 font-bold text-lg" data-i18n="platform.feat2.title">Instant Notifications</h4>
-                <p class="text-gray-500 text-sm" data-i18n="platform.feat2.desc">Never miss a status update or delivery.
-                </p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-600 mt-1">
-                <i data-lucide="check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="text-gray-900 font-bold text-lg" data-i18n="platform.feat3.title">Digital Archive</h4>
-                <p class="text-gray-500 text-sm" data-i18n="platform.feat3.desc">Access all your shipping documents
-                  securely.</p>
-              </div>
-            </li>
+        <!-- Quick Links -->
+        <div class="md:col-span-4 text-start">
+          <h3 class="text-sm font-extrabold text-lime uppercase tracking-wider mb-4" data-i18n="footer.links_title">بەستەرە خێراکان</h3>
+          <ul class="grid grid-cols-2 gap-2.5 text-sm text-paper/80">
+            <li><a href="#services" class="hover:text-lime transition-colors" data-i18n="nav.services">خزمەتگوزارییەکان</a></li>
+            <li><a href="#how-it-works" class="hover:text-lime transition-colors" data-i18n="nav.how">چۆن کاردەکات</a></li>
+            <li><a href="#payment" class="hover:text-lime transition-colors" data-i18n="nav.payment">پارەدان</a></li>
+            <li><a href="#stores" class="hover:text-lime transition-colors" data-i18n="nav.stores">فرۆشگاکان</a></li>
+            <li><a href="#download" class="hover:text-lime transition-colors" data-i18n="nav.app">داگرتنی ئەپ</a></li>
+            <li><a href="#faq" class="hover:text-lime transition-colors" data-i18n="nav.faq">پرسیارە باوەکان</a></li>
           </ul>
+        </div>
 
-          <div class="mt-10 flex gap-4">
-            <a href="https://apps.apple.com/iq/app/shiply-express/id6756037985" target="_blank"
-              class="hover:opacity-80 transition-opacity">
-              <img src="/images/download-button-ios.png" alt="App Store"
-                class="h-12 w-auto border border-black/10 rounded-lg">
+        <!-- Social & Contact -->
+        <div class="md:col-span-3 text-start">
+          <h3 class="text-sm font-extrabold text-lime uppercase tracking-wider mb-4" data-i18n="footer.connect_title">پەیوەندی</h3>
+          <div class="flex items-center gap-3 mb-4">
+            <a href="https://wa.me/9647509490950" target="_blank" rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-lime hover:text-night text-white flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+              </svg>
             </a>
-            <a href="#" class="hover:opacity-80 transition-opacity">
-              <img src="/images/download-button-android.png" alt="Google Play"
-                class="h-12 w-auto border border-black/10 rounded-lg">
+            <a href="https://www.instagram.com/shiply.iraq/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-lime hover:text-night text-white flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://apps.apple.com/iq/app/shiply-express/id6756037985" target="_blank" rel="noopener noreferrer"
+              aria-label="App Store"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-lime hover:text-night text-white flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3" />
+              </svg>
             </a>
           </div>
-        </div>
-
-        <!-- RIGHT: Phone Mockup -->
-        <div class="relative flex justify-center perspective-1000">
-          <!-- Phone Frame -->
-          <div
-            class="relative w-[300px] h-[600px] bg-[#1a1a1a] rounded-[40px] border-[8px] border-[#2a2a2a] shadow-2xl overflow-hidden transform rotate-y-[-10deg] hover:rotate-y-0 transition-transform duration-500">
-            <!-- Notch -->
-            <div class="absolute top-0 start-1/2 -translate-x-1/2 w-40 h-7 bg-[#2a2a2a] rounded-b-xl z-20"></div>
-
-            <!-- Screen Content -->
-            <div class="w-full h-full bg-white relative">
-              <div id="carousel-track" dir="ltr" class="flex h-full transition-transform duration-500 ease-in-out">
-                <img src="/images/platform/app1.png" class="flex-shrink-0 w-full h-full object-cover">
-                <img src="/images/platform/app2.png" class="flex-shrink-0 w-full h-full object-cover">
-                <img src="/images/platform/app3.png" class="flex-shrink-0 w-full h-full object-cover">
-                <img src="/images/platform/app4.png" class="flex-shrink-0 w-full h-full object-cover">
-              </div>
-            </div>
-
-            <!-- Touch Overlay for Swiping -->
-            <div class="absolute inset-0 z-30 cursor-grab" id="phone-overlay"></div>
-          </div>
-
-          <!-- Behind Glow -->
-          <div
-            class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[600px] bg-purple-600/20 blur-[80px] -z-10">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-24 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div
-        class="inline-block p-1 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm mb-8">
-        <div class="px-6 py-2 rounded-full border border-black/10 bg-white/40">
-          <span class="text-sm font-semibold text-purple-600 tracking-wider">EST. 2024</span>
-        </div>
-      </div>
-
-      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight" data-i18n="about.title">Redefining
-        Logistics through Innovation</h2>
-      <p class="text-xl text-gray-600 leading-relaxed font-light" data-i18n="about.p1">
-        SHIPLY is not just a shipping company; we are an orbit of connectivity. We merge high-end technology with human
-        expertise to ensure your cargo moves through the world with the elegance and speed it deserves.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 relative">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <!-- Info -->
-        <div class="text-start">
-          <h2 class="text-sm font-bold text-purple-600 uppercase tracking-wider mb-3" data-i18n="contact.label">CONTACT
-            US</h2>
-          <h2 class="text-4xl md:text-6xl font-bold mb-8 text-gray-900" data-i18n="contact.title">Let's Talk.</h2>
-          <p class="text-gray-600 text-lg mb-12" data-i18n="contact.subtitle">If you want to get code and address to
-            login our app fill this form</p>
-
-          <div class="space-y-8">
-            <div class="flex items-center gap-6">
-              <div
-                class="w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-purple-600">
-                <i data-lucide="phone" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 uppercase tracking-widest mb-1" data-i18n="contact.phone">PHONE</div>
-                <a href="tel:+9647509490950"
-                  class="text-xl font-bold text-gray-900 hover:text-purple-600 transition-colors" dir="ltr">+964 750 949
-                  0950</a>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-6">
-              <div
-                class="w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-purple-600">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 uppercase tracking-widest mb-1" data-i18n="contact.email">EMAIL</div>
-                <a href="mailto:shiplyiraq.express@gmail.com"
-                  class="text-xl font-bold text-gray-900 hover:text-purple-600 transition-colors">shiplyiraq.express@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-6">
-              <div
-                class="w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-purple-600">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 uppercase tracking-widest mb-1" data-i18n="contact.address">LOCATION
-                </div>
-                <a href="https://maps.google.com/?q=E1+Tower,+60m+Street,+Erbil,+Iraq" target="_blank"
-                  class="text-xl font-bold text-gray-900 hover:text-purple-600 transition-colors">
-                  E1 Tower, Erbil, Iraq
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <div class="luxury-card bg-white/80 backdrop-blur-xl">
-          <form class="space-y-6" id="whatsapp-form">
-            <div>
-              <label class="block text-sm font-medium text-gray-600 mb-2 text-start" data-i18n="form.name">Your
-                Full Name</label>
-              <input type="text" id="form-name"
-                class="w-full bg-black/5 border border-black/10 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder-gray-600"
-                placeholder="" required>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-600 mb-2 text-start" data-i18n="form.phone">Your Phone
-                Number</label>
-              <input type="tel" id="form-phone"
-                class="w-full bg-black/5 border border-black/10 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder-gray-600"
-                placeholder="" required>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-600 mb-2 text-start" data-i18n="form.country">Select
-                Country to Get Address</label>
-              <select id="form-country"
-                class="w-full bg-black/5 border border-black/10 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder-gray-600 appearance-none">
-                <option value="Emirates" class="bg-gray-900 text-gray-900" data-i18n="form.favorites.emirates">Emirates
-                </option>
-                <option value="China" class="bg-gray-900 text-gray-900" data-i18n="form.favorites.china">China</option>
-                <option value="USA" class="bg-gray-900 text-gray-900" data-i18n="form.favorites.usa">USA</option>
-                <option value="Turkey" class="bg-gray-900 text-gray-900" data-i18n="form.favorites.turkey">Turkey
-                </option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-600 mb-2 text-start" data-i18n="form.address">Your
-                Address</label>
-              <input type="text" id="form-address"
-                class="w-full bg-black/5 border border-black/10 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder-gray-600"
-                placeholder="" required>
-            </div>
-            <button type="submit"
-              class="w-full btn-primary py-4 text-center text-lg font-bold shadow-lg shadow-purple-900/40"
-              data-i18n="form.submit">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-black/10 bg-white pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-        <div class="mb-8 md:mb-0 text-center md:text-start">
-          <img src="/images/logo-purple.png" class="h-8 w-auto mb-4 mx-auto md:mx-0" alt="SHIPLY">
-          <p class="text-gray-500 text-sm max-w-xs" data-i18n="footer.tagline">Global logistics partner for the modern
-            world.</p>
-        </div>
-
-        <div class="flex gap-8">
-          <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors" data-i18n="nav.home">Home</a>
-          <a href="#services" class="text-gray-600 hover:text-purple-600 transition-colors"
-            data-i18n="nav.services">Services</a>
-          <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors" data-i18n="nav.about">About</a>
-          <a href="#contact" class="text-gray-600 hover:text-purple-600 transition-colors"
-            data-i18n="nav.contact">Contact</a>
-        </div>
-
-        <div class="flex gap-4 mt-8 md:mt-0">
-          <a href="https://www.instagram.com/shiply.iraq/" target="_blank"
-            class="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center text-gray-900 hover:bg-purple-600 transition-all">
-            <i data-lucide="instagram" class="w-5 h-5"></i>
+          <a href="mailto:shiplyiraq.express@gmail.com"
+            class="block text-xs text-paper/75 hover:text-lime transition-colors" dir="ltr">
+            shiplyiraq.express@gmail.com
           </a>
         </div>
+
       </div>
 
-      <div
-        class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-        <p data-i18n="footer.rights">© 2025 SHIPLY Express. All right reserved.</p>
-
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-paper/70">
+        <p data-i18n="footer.rights">© 2026 Shiply Express — هەموو مافەکان پارێزراون.</p>
+        <div class="flex items-center gap-4">
+          <button type="button" onclick="setLanguage('ku')" class="hover:text-lime transition-colors">کوردی</button>
+          <span>·</span>
+          <button type="button" onclick="setLanguage('ar')" class="hover:text-lime transition-colors">العربية</button>
+          <span>·</span>
+          <button type="button" onclick="setLanguage('en')" class="hover:text-lime transition-colors">English</button>
+        </div>
       </div>
     </div>
   </footer>
 
   <script type="module" src="/src/main.js"></script>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu-overlay"
-    class="fixed inset-0 z-[100] bg-white/80 backdrop-blur-sm hidden transition-opacity opacity-0"></div>
-
-  <!-- Mobile Menu Sidebar -->
-  <div id="mobile-menu" style="background-color: #ffffff;"
-    class="fixed top-0 end-0 w-[80%] max-w-sm h-full border-s border-black/10 shadow-2xl z-[101] transform translate-x-full rtl:-translate-x-full transition-transform duration-300 flex flex-col">
-
-    <div class="flex justify-between items-center p-6 border-b border-black/10">
-      <span class="text-xl font-bold font-outfit text-gray-900" data-i18n="nav.menu">Menu</span>
-      <button id="mobile-menu-close" class="text-gray-600 hover:text-purple-600">
-        <i data-lucide="x" class="w-6 h-6"></i>
-      </button>
-    </div>
-
-    <div class="flex-1 overflow-y-auto py-8 px-6 space-y-2">
-      <a href="#home"
-        class="block px-4 py-3 rounded-xl text-lg text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all flex items-center gap-3"
-        data-i18n="nav.home">
-        <i data-lucide="home" class="w-5 h-5 text-purple-500"></i> HOME
-      </a>
-      <a href="#platform"
-        class="block px-4 py-3 rounded-xl text-lg text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all flex items-center gap-3"
-        data-i18n="nav.platform">
-        <i data-lucide="smartphone" class="w-5 h-5 text-purple-500"></i> PLATFORM
-      </a>
-      <a href="#services"
-        class="block px-4 py-3 rounded-xl text-lg text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all flex items-center gap-3"
-        data-i18n="nav.services">
-        <i data-lucide="layers" class="w-5 h-5 text-purple-500"></i> SERVICES
-      </a>
-      <a href="#about"
-        class="block px-4 py-3 rounded-xl text-lg text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all flex items-center gap-3"
-        data-i18n="nav.about">
-        <i data-lucide="info" class="w-5 h-5 text-purple-500"></i> ABOUT
-      </a>
-      <a href="#contact"
-        class="block px-4 py-3 rounded-xl text-lg text-gray-700 hover:bg-black/5 hover:text-purple-600 transition-all flex items-center gap-3"
-        data-i18n="nav.contact">
-        <i data-lucide="mail" class="w-5 h-5 text-purple-500"></i> CONTACT
-      </a>
-
-      <div class="h-px bg-black/10 my-4"></div>
-
-      <div class="space-y-4">
-        <p class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Languages</p>
-        <div class="grid grid-cols-3 gap-2 px-4">
-          <button onclick="setLanguage('en')"
-            class="py-2 rounded-lg bg-black/5 hover:bg-purple-600/20 text-sm text-gray-700 hover:text-purple-600 border border-white/5 transition-all">English</button>
-          <button onclick="setLanguage('ar')"
-            class="py-2 rounded-lg bg-black/5 hover:bg-purple-600/20 text-sm text-gray-700 hover:text-purple-600 border border-white/5 transition-all font-arabic">العربية</button>
-          <button onclick="setLanguage('ku')"
-            class="py-2 rounded-lg bg-black/5 hover:bg-purple-600/20 text-sm text-gray-700 hover:text-purple-600 border border-white/5 transition-all font-arabic">کوردی</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="p-6 border-t border-black/10 bg-white/20">
-      <a href="#contact" class="w-full btn-primary flex justify-center items-center gap-2" data-i18n="nav.cta">
-        Get Started
-      </a>
-    </div>
-  </div>
 </body>
 
 </html>
-

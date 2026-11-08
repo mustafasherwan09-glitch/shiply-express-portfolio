@@ -1,25 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
-        "./*.{js,ts,jsx,tsx,html}"
-    ],
-    theme: {
-        extend: {
-            colors: {
-                primary: "#ffffff", // Light/White background
-                accent: "#7c3aed", // Bright Purple
-                "accent-hover": "#6d28d9",
-                text: "#1e293b", // Slate 900
-            },
-            fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-            },
-            backgroundImage: {
-                'hero-pattern': "url('/images/hero-bg.jpg')", // Placeholder if needed, but we might use a solid color or gradient as per request if no image provided, but user asked for "large, compelling image or background video". I'll use a placeholder or search for one.
-            }
-        },
+  content: [
+    "./index.html",
+    "./404.html",
+    "./email-template.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./*.{js,ts,jsx,tsx,html}"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        royal: "#2E1675",
+        night: "#1D1240",
+        violet: "#5B3CC4",
+        lime: "#C6F16A",
+        paper: "#F6F5FA",
+      },
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', '"Vazirmatn"', 'sans-serif'],
+        kurdish: ['"Vazirmatn"', '"Plus Jakarta Sans"', 'sans-serif'],
+        english: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
     },
-    plugins: [],
+  },
+  plugins: [],
 }

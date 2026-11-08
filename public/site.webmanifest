@@ -1,0 +1,56 @@
+{
+  "name": "Shiply Express — شيبلي ئێکسپرێس",
+  "short_name": "Shiply",
+  "description": "تۆ هەڵبژێرە، ئێمە دەیکڕین و دەیهێنین — You choose, we buy it and bring it.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1D1240",
+  "theme_color": "#1D1240",
+  "dir": "rtl",
+  "lang": "ku",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+
