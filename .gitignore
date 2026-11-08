@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 Shiply-Express-Logo-Pack/
+app_screenshoots/
 
 # Editor directories and files
 .vscode/*
